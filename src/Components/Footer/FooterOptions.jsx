@@ -1,7 +1,15 @@
 import React from "react";
 import { Flex, Box, Text } from "@chakra-ui/react";
 import { Grid, GridItem, Wrap, WrapItem, Image, Link } from '@chakra-ui/react'
+import { FaFacebook, FaTwitter } from "react-icons/fa"
+import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai"
+import youtubeLogo from "../../Images/footer/youtube.svg"
+
+
 import style from "./Footer.module.css";
+
+
+
 import FooterSubOptions1 from "./FooterSubOptions1";
 import FooterSubOptions2 from "./FooterSubOptions2";
 import FooterSubOptions3 from "./FooterSubOptions3";
@@ -106,6 +114,24 @@ function FooterOptions() {
                     <Image src={iosDonload} alt="iosDownload" />
                 </Link>
             </Flex>
+            <Flex gap={2} w="100%" m="20px auto" justifyContent="center" className={style.socialLinks}>
+                <Link href="https://www.facebook.com/nobrokercom/" isExternal>
+                    <FaFacebook />
+                </Link>
+                <Link href="https://twitter.com/nobrokercom" isExternal>
+                    <FaTwitter />
+                </Link>
+                <Link href="https://www.instagram.com/nobroker/" isExternal>
+                    <AiFillInstagram />
+                </Link>
+                <Link href="https://www.linkedin.com/company/nobroker-in/" isExternal>
+                    <AiFillLinkedin />
+                </Link>
+                <Link href="https://www.youtube.com/c/NoBrokercomOfficial" isExternal>
+                    <Image src={youtubeLogo}></Image>
+                </Link>
+            </Flex>
+            <Text align="center" p="0 0 20px 0" fontSize="14px" letterSpacing="0.5px">© 2013-22 NoBroker Technologies Solution Pvt. Ltd.</Text>
         </Box>
     );
 }

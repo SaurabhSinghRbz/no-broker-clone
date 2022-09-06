@@ -94,3 +94,15 @@ ul>li {
     cursor: pointer;
     color: black;
 }
+
+.socialLinks>a {
+    background-color: #e8e8e8;
+    border-radius: 100%;
+    padding: 7px 9px;
+    margin: 0 20px;
+}
+
+.socialLinks svg {
+    height: 20px;
+    width: 20px;
+}
