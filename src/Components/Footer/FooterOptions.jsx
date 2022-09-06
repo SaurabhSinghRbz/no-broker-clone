@@ -11,17 +11,16 @@ import FooterSubOptions7 from "./FooterSubOptions7";
 
 function FooterOptions() {
     const [selectedBg, setSelectedBg] = React.useState(1);
-    console.log(selectedBg);
     return (
         <Box>
             <Flex className={style.footerOptions}>
-                <Box onClick={() => setSelectedBg(1)}>Flats for Sale</Box>
-                <Box onClick={() => setSelectedBg(2)}>Flats for Rent</Box>
-                <Box onClick={() => setSelectedBg(3)}>PG / Hostels</Box>
-                <Box onClick={() => setSelectedBg(4)}>Flatmates</Box>
-                <Box onClick={() => setSelectedBg(5)}>Miscellaneous</Box>
-                <Box onClick={() => setSelectedBg(6)}>Commercial</Box>
-                <Box onClick={() => setSelectedBg(7)}>New Projects</Box>
+                <Box onClick={() => setSelectedBg(1)} style={selectedBg === 1 ? { borderBottom: "3px solid black" } : {}}>Flats for Sale</Box>
+                <Box onClick={() => setSelectedBg(2)} style={selectedBg === 2 ? { borderBottom: "3px solid black" } : {}}>Flats for Rent</Box>
+                <Box onClick={() => setSelectedBg(3)} style={selectedBg === 3 ? { borderBottom: "3px solid black" } : {}}>PG / Hostels</Box>
+                <Box onClick={() => setSelectedBg(4)} style={selectedBg === 4 ? { borderBottom: "3px solid black" } : {}}>Flatmates</Box>
+                <Box onClick={() => setSelectedBg(5)} style={selectedBg === 5 ? { borderBottom: "3px solid black" } : {}}>Miscellaneous</Box>
+                <Box onClick={() => setSelectedBg(6)} style={selectedBg === 6 ? { borderBottom: "3px solid black" } : {}}>Commercial</Box>
+                <Box onClick={() => setSelectedBg(7)} style={selectedBg === 7 ? { borderBottom: "3px solid black" } : {}}>New Projects</Box>
             </Flex>
             {selectedBg === 1 ? (
                 <FooterSubOptions1 />

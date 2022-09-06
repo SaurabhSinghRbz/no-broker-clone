@@ -82,32 +82,32 @@ function FooterSubOptions2() {
         <Flex className={style.footerSubOptions}>
             <Box>
                 <Box>Flats for Rent in Bangalore</Box>
-                {textArr1.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr1.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
                 <Box>Flats for Rent in Mumbai</Box>
-                {textArr2.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr2.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
                 <Box>Flats for Rent in Chennai</Box>
-                {textArr3.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr3.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
                 <Box>Flats for Rent in Pune</Box>
-                {textArr4.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr4.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
                 <Box>Flats for Rent in Gurgaon</Box>
-                {textArr5.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr5.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
         </Flex>

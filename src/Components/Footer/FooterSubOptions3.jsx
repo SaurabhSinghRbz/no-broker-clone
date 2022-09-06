@@ -72,32 +72,32 @@ function FooterSubOptions3() {
         <Flex className={style.footerSubOptions}>
             <Box>
                 <Box>PG in Bangalore</Box>
-                {textArr1.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr1.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
                 <Box>PG in Mumbai</Box>
-                {textArr2.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr2.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
                 <Box>PG in Chennai</Box>
-                {textArr3.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr3.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
                 <Box>PG in Pune</Box>
-                {textArr4.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr4.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
                 <Box>PG / Hostels in Gurgaon</Box>
-                {textArr5.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr5.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
         </Flex>

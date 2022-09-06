@@ -98,28 +98,28 @@ function FooterSubOptions5() {
     return (
         <Flex className={style.footerSubOptions}>
             <Box>
-                {textArr1.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr1.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
-                {textArr2.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr2.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
-                {textArr3.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr3.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
-                {textArr4.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr4.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
-                {textArr5.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr5.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
         </Flex>

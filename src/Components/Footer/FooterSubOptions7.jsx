@@ -70,32 +70,32 @@ function FooterSubOptions7() {
         <Flex className={style.footerSubOptions}>
             <Box>
                 <Box>New Projects in Bangalore</Box>
-                {textArr1.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr1.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
                 <Box>New Projects in Mumbai</Box>
-                {textArr2.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr2.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
                 <Box>New Projects in Chennai</Box>
-                {textArr3.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr3.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
                 <Box>New Projects in Pune</Box>
-                {textArr4.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr4.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
             <Box>
                 <Box>New Projects in Gurgaon</Box>
-                {textArr5.map((text) => (
-                    <FooterSubOptionsText text={text} />
+                {textArr5.map((text, idx) => (
+                    <FooterSubOptionsText text={text} key={idx} />
                 ))}
             </Box>
         </Flex>
