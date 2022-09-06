@@ -43,16 +43,16 @@ function Navbar() {
                             <MenuItem><Link to="/">Rental Agreement</Link></MenuItem>
                             <MenuItem><Link to="/">Painting & Cleaning</Link></MenuItem>
                             <MenuItem><Link to="/">Refer & Earn</Link></MenuItem>
-                            <MenuItem><Link to="/"></Link>Rent Receipts</MenuItem>
-                            <MenuItem><Link to="/"></Link>Tenant Plans</MenuItem>
-                            <MenuItem><Link to="/"></Link>Owner Plans</MenuItem>
-                            <MenuItem><Link to="/"></Link>Buyer Plans</MenuItem>
-                            <MenuItem><Link to="/"></Link>Seller Plans</MenuItem>
-                            <MenuItem><Link to="/"></Link>Commercial Plans</MenuItem>
-                            <MenuItem><Link to="/"></Link>Careers</MenuItem>
-                            <MenuItem><Link to="/"></Link>Corporate Enquiry</MenuItem>
-                            <MenuItem><Link to="/"></Link>Blog</MenuItem>
-                            <MenuItem><Link to="/"></Link>Contact Us</MenuItem>
+                            <MenuItem><Link to="/">Rent Receipts</Link></MenuItem>
+                            <MenuItem><Link to="/">Tenant Plans</Link></MenuItem>
+                            <MenuItem><Link to="/">Owner Plans</Link></MenuItem>
+                            <MenuItem><Link to="/">Buyer Plans</Link></MenuItem>
+                            <MenuItem><Link to="/">Seller Plans</Link></MenuItem>
+                            <MenuItem><Link to="/">Commercial Plans</Link></MenuItem>
+                            <MenuItem><Link to="/">Careers</Link></MenuItem>
+                            <MenuItem><Link to="/">Corporate Enquiry</Link></MenuItem>
+                            <MenuItem><Link to="/">Blog</Link></MenuItem>
+                            <MenuItem><Link to="/">Contact Us</Link></MenuItem>
                         </MenuList>
                     </Menu>
                 </Box>
