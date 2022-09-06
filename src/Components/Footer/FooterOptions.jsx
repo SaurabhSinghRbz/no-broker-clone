@@ -1,5 +1,6 @@
 import React from "react";
-import { Flex, Box } from "@chakra-ui/react";
+import { Flex, Box, Text } from "@chakra-ui/react";
+import { Grid, GridItem, Wrap, WrapItem, Button } from '@chakra-ui/react'
 import style from "./Footer.module.css";
 import FooterSubOptions1 from "./FooterSubOptions1";
 import FooterSubOptions2 from "./FooterSubOptions2";
@@ -37,6 +38,40 @@ function FooterOptions() {
             ) : (
                 <FooterSubOptions7 />
             )}
+            <Text fontSize="22px" p="0 0 25px 25px" fontWeight="600">NoBroker Services</Text>
+            <Grid templateColumns='repeat(2, 1fr)' gap={20} m="5px 25px 10px 25px">
+                <GridItem>
+                    <Text fontSize="17px">Buy</Text>
+                    <Wrap spacing={3} p="15px 0">
+                        <WrapItem>Home Loan</WrapItem>
+                        <WrapItem>Property Legal Services</WrapItem>
+                        <WrapItem>Interiors</WrapItem>
+                        <WrapItem>Sale Agreement</WrapItem>
+                        <WrapItem>NoBroker For NRI's</WrapItem>
+                        <WrapItem>New Builder Project</WrapItem>
+                        <WrapItem>EMI Calculator</WrapItem>
+                        <WrapItem>Home Loan Balance Transfer</WrapItem>
+                        <WrapItem>Home Loan Eligibility Check</WrapItem>
+                        <WrapItem>Apply Home Loan</WrapItem>
+                        <WrapItem>Pre Approved Home Loan</WrapItem>
+                        <WrapItem>Buy / Sell Property Questions</WrapItem>
+                    </Wrap>
+                </GridItem>
+
+                <GridItem>
+                    <Text fontSize="17px">Rent</Text>
+                    <Wrap spacing={3} p="15px 0">
+                        <WrapItem>Rental Agreement</WrapItem>
+                        <WrapItem>Pay Rent</WrapItem>
+                        <WrapItem>Refer and Earn</WrapItem>
+                        <WrapItem>Home Services</WrapItem>
+                        <WrapItem>Packers and Movers</WrapItem>
+                        <WrapItem>Property Management in India</WrapItem>
+                        <WrapItem>Home Services Questions</WrapItem>
+                        <WrapItem>Rent Services Questions</WrapItem>
+                    </Wrap>
+                </GridItem>
+            </Grid>
         </Box>
     );
 }
