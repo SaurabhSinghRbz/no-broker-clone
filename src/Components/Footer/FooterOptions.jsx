@@ -131,7 +131,7 @@ function FooterOptions() {
                     <Image src={youtubeLogo}></Image>
                 </Link>
             </Flex>
-            <Text align="center" p="0 0 20px 0" fontSize="14px" letterSpacing="0.5px">© 2013-22 NoBroker Technologies Solution Pvt. Ltd.</Text>
+            <Text align="center" p="0 0 20px 0" fontSize="13px" letterSpacing="0.5px">© 2013-22 NoBroker Technologies Solution Pvt. Ltd.</Text>
         </Box>
     );
 }

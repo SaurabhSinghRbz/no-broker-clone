@@ -1,0 +1,75 @@
+.navBarContainer {
+    box-shadow: rgb(0 0 0 / 11%) 0px 2px 10px;
+    padding: 5px 20px;
+    background-color: white;
+    justify-content: space-between;
+    height: 61px;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 30;
+}
+
+
+.logo {
+    height: 33px;
+    width: auto;
+}
+
+.payRent {
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: #555;
+    font-weight: 300;
+    border: 1px solid #e6e6e6;
+    padding: 4px 10px;
+    border-radius: 2px;
+    height: 30px;
+    font-size: 13px;
+    font-family: Source Sans Pro, sans-serif;
+}
+
+.loginSingUp {
+    user-select: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: #555;
+    font-weight: 300;
+    padding: 0 15px;
+    font-size: 14px;
+    font-family: Source Sans Pro, sans-serif;
+    line-height: inherit;
+    border-right: 1px solid rgba(0, 0, 0, .105882);
+}
+
+.menuBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuBox a {
+    width: 100%;
+    padding: 8px 0;
+    margin: 0px 25px;
+    font-size: 14px;
+    border-bottom: 1px solid #ebebeb;
+    font-weight: 400;
+    display: block;
+    color: #777;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menuOptionBox {
+    width: 250px !important;
+    max-height: 75vh !important;
+    position: absolute !important;
+    right: -70px !important;
+    border-radius: 0px !important;
+    overflow: auto;
+    border: 1px solid #ddd !important;
+}

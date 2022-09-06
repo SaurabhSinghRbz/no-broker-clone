@@ -1,8 +1,63 @@
 import React from 'react'
+import { Box, Button, Flex, Text, Menu, MenuButton, IconButton, MenuList, MenuItem } from "@chakra-ui/react"
+import { HamburgerIcon, ExternalLinkIcon, RepeatIcon, EditIcon, AddIcon } from "@chakra-ui/icons"
+import { Image } from '@chakra-ui/react'
+import style from "./NavBar.module.css"
+import logo from "../../Images/navbar/logo.png"
+import { Link } from "react-router-dom"
+import myBooking from "../../Images/navbar/myBookings.svg"
+import payRent from "../../Images/navbar/payrent.png"
 
 function Navbar() {
     return (
-        <div>Navbar</div>
+        <Flex className={style.navBarContainer}>
+            <Box>
+                <Link to="/"><Image src={logo} alt='Dan Abramov' className={style.logo} /></Link>
+            </Box>
+            <Flex gap={5}>
+                <Link to="/">
+                    <Flex className={style.payRent}><Image src={myBooking} /> My Bookings</Flex>
+                </Link>
+                <Link to="/">
+                    <Flex className={style.payRent}><Image src={payRent} /> Pay Rent</Flex>
+                </Link>
+                <Link to="/">
+                    <Flex className={style.payRent} bgColor="#009587" color="white" borderRadius="4px">For Property owners</Flex>
+                </Link>
+                <Flex alignItems="center">
+                    <Link to="/"><Text className={style.loginSingUp} >Sign Up</Text></Link>
+                    <Link to="/"><Text className={style.loginSingUp} >Log In</Text></Link>
+                </Flex>
+                <Box className={style.menuBox}>
+                    <Menu >
+                        <MenuButton
+                            as={IconButton}
+                            aria-label='Options'
+                            icon={<HamburgerIcon />}
+                            variant='link'
+                            minW="fit-content !important"
+                            p="0 2px 0 0"
+                        />Menu
+                        <MenuList className={style.menuOptionBox}>
+                            <MenuItem><Link to="/">Post Your Property</Link></MenuItem>
+                            <MenuItem><Link to="/">Rental Agreement</Link></MenuItem>
+                            <MenuItem><Link to="/">Painting & Cleaning</Link></MenuItem>
+                            <MenuItem><Link to="/">Refer & Earn</Link></MenuItem>
+                            <MenuItem><Link to="/"></Link>Rent Receipts</MenuItem>
+                            <MenuItem><Link to="/"></Link>Tenant Plans</MenuItem>
+                            <MenuItem><Link to="/"></Link>Owner Plans</MenuItem>
+                            <MenuItem><Link to="/"></Link>Buyer Plans</MenuItem>
+                            <MenuItem><Link to="/"></Link>Seller Plans</MenuItem>
+                            <MenuItem><Link to="/"></Link>Commercial Plans</MenuItem>
+                            <MenuItem><Link to="/"></Link>Careers</MenuItem>
+                            <MenuItem><Link to="/"></Link>Corporate Enquiry</MenuItem>
+                            <MenuItem><Link to="/"></Link>Blog</MenuItem>
+                            <MenuItem><Link to="/"></Link>Contact Us</MenuItem>
+                        </MenuList>
+                    </Menu>
+                </Box>
+            </Flex>
+        </Flex>
     )
 }
 
