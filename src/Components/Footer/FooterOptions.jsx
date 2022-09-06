@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Box, Text } from "@chakra-ui/react";
-import { Grid, GridItem, Wrap, WrapItem, Button } from '@chakra-ui/react'
+import { Grid, GridItem, Wrap, WrapItem, Image, Link } from '@chakra-ui/react'
 import style from "./Footer.module.css";
 import FooterSubOptions1 from "./FooterSubOptions1";
 import FooterSubOptions2 from "./FooterSubOptions2";
@@ -9,6 +9,10 @@ import FooterSubOptions4 from "./FooterSubOptions4";
 import FooterSubOptions5 from "./FooterSubOptions5";
 import FooterSubOptions6 from "./FooterSubOptions6";
 import FooterSubOptions7 from "./FooterSubOptions7";
+
+
+import androidDownload from "../../Images/footer/googlePlayStore.svg"
+import iosDonload from "../../Images/footer/iosDownload.svg"
 
 function FooterOptions() {
     const [selectedBg, setSelectedBg] = React.useState(1);
@@ -83,6 +87,24 @@ function FooterOptions() {
                     <Text fontSize="14px">For Free. Without any brokerage.</Text>
                     <Text backgroundColor="#464646" color="white">Free Posting</Text>
                 </Box>
+            </Flex>
+            <Flex w="100%" m="auto" justifyContent="center" className={style.aboutUs}>
+                <Text>About Us</Text>
+                <Text>Careers</Text>
+                <Text>Terms & Conditions</Text>
+                <Text>Privacy Policy</Text>
+                <Text>Testimonials</Text>
+                <Text>Sitemap</Text>
+                <Text>FAQs</Text>
+            </Flex>
+            <Box border="1px solid rgba(70, 70, 70, .239216)" m="35px 18%" ></Box>
+            <Flex gap={10} w="100%" m="auto" justifyContent="center">
+                <Link href='https://play.google.com/store/apps/details?id=com.nobroker.app&referrer=utm_source=nobroker&utm_medium=website' isExternal>
+                    <Image src={androidDownload} alt="androidDownload" />
+                </Link>
+                <Link href='https://apps.apple.com/nz/app/nobroker-house-for-rent/id1200507100?referrer=utm_source%3Dnobroker&utm_medium=website' isExternal>
+                    <Image src={iosDonload} alt="iosDownload" />
+                </Link>
             </Flex>
         </Box>
     );

@@ -83,3 +83,14 @@ ul>li {
 .findNow>div>:last-child:hover {
     cursor: pointer;
 }
+
+.aboutUs>p {
+    margin: 0 20px;
+    font-size: 18px;
+    color: #464646;
+}
+
+.aboutUs>p:hover {
+    cursor: pointer;
+    color: black;
+}
