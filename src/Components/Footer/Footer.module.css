@@ -2,6 +2,7 @@
     justify-content: space-between;
     padding: 5px 20px;
     border-top: 1px solid grey;
+
     background-color: hsla(0, 0%, 92.9%, .4);
     overflow: auto;
 }
@@ -15,8 +16,10 @@
 
 .footerSubOptions {
     justify-content: space-between;
-    padding: 5px 20px;
+    padding: 5px 20px 30px 20px;
     overflow: auto;
+    margin-bottom: 50px;
+    border-bottom: 1px solid grey;
 }
 
 
@@ -26,6 +29,7 @@
     padding: 15px 10px 0px 10px;
     cursor: pointer;
     font-weight: 600;
+
 }
 
 .footerSubOptions p {
