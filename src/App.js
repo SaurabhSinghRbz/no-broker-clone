@@ -1,10 +1,10 @@
-
-import './App.css';
+import './App.css'
+import { SearchPage } from './Pages/SearchPage/SearchPage';
 
 function App() {
   return (
     <div className="App">
-      <h1>Initial Check</h1>
+      <SearchPage />
     </div>
   );
 }
