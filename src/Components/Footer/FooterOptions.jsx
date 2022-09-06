@@ -72,6 +72,18 @@ function FooterOptions() {
                     </Wrap>
                 </GridItem>
             </Grid>
+            <Flex className={style.findNow}>
+                <Box borderRight="1px solid grey" w="50%">
+                    <Text as='b' fontSize="18px">Find Property</Text>
+                    <Text fontSize="14px">Select from thousands of options, without brokerage.</Text>
+                    <Text backgroundColor="#464646" color="white" p="0" m="0">Find Now</Text>
+                </Box>
+                <Box w="50%">
+                    <Text as="b" fontSize="18px">List Your Property</Text>
+                    <Text fontSize="14px">For Free. Without any brokerage.</Text>
+                    <Text backgroundColor="#464646" color="white">Free Posting</Text>
+                </Box>
+            </Flex>
         </Box>
     );
 }

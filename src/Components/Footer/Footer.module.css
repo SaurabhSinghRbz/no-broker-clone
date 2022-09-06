@@ -51,3 +51,35 @@ ul>li {
     cursor: pointer;
     font-size: 14px;
 }
+
+.findNow {
+    margin: 20px 0;
+    background-color: #ededed;
+    justify-content: space-around;
+    padding: 30px 0;
+    border-top: 1px solid rgba(70, 70, 70, .239216);
+    border-bottom: 1px solid rgba(70, 70, 70, .239216);
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.findNow>div {
+    text-align: center;
+}
+
+.findNow>div>:last-child {
+    padding: 3px 20px;
+    border-radius: 4px;
+    background-color: #333333;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+
+.findNow>div>:last-child:hover {
+    cursor: pointer;
+}
