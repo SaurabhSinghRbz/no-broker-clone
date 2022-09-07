@@ -1,6 +1,6 @@
 import React from 'react'
-import { Box, Button, Flex, Text, Menu, MenuButton, IconButton, MenuList, MenuItem } from "@chakra-ui/react"
-import { HamburgerIcon, ExternalLinkIcon, RepeatIcon, EditIcon, AddIcon } from "@chakra-ui/icons"
+import { Box, Flex, Text, Menu, MenuButton, IconButton, MenuList, MenuItem } from "@chakra-ui/react"
+import { HamburgerIcon } from "@chakra-ui/icons"
 import { Image } from '@chakra-ui/react'
 import style from "./NavBar.module.css"
 import logo from "../../Images/navbar/logo.png"

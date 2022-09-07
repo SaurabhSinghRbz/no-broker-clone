@@ -10,7 +10,6 @@ function App() {
       <Navbar />
       <Homepage />
       <div style={{ height: "500px" }}></div>
-      <h1></h1>
       <Footer />
     </div>
   );
