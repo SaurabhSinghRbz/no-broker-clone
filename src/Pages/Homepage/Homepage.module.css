@@ -176,7 +176,7 @@ option {
 
 .optiosWithIcon>div img:hover {
     cursor: pointer;
-    transition-duration: 0.3s;
+    transition-duration: 0.4s;
     transform: scale(1.2);
 }
 
@@ -235,6 +235,12 @@ option {
 
 .whyUseNoBroker img {
     margin: auto;
+}
+
+.whyUseNoBroker img:hover {
+    cursor: pointer;
+    transition-duration: 0.4s;
+    transform: scale(1.2);
 }
 
 .whyUseNoBroker>div>:nth-child(2) {

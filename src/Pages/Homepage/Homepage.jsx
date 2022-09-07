@@ -10,6 +10,8 @@ import {
     Text,
     Button,
     Input,
+    Center,
+    Circle,
 } from "@chakra-ui/react";
 import nIcon from "../../Images/Homepage/nIcon.png";
 import { Link, Route, Routes } from "react-router-dom";
@@ -258,6 +260,43 @@ function Homepage() {
                         <Text fontSize="18px" fontWeight="400">Get in touch with us to Sell or Rent Your Projects</Text>
                         <a href="https://www.nobroker.in/prophub/builders/builders/" target="_blank" className={style.enquiryBtn}>Enquire Now</a>
                         <Text fontSize="14px" p="2px 0" borderTop="1px solid #ccc">For Builder Enquiries: +91 91080 50400</Text>
+                    </Box>
+                </Flex>
+            </Box>
+
+
+            <Box p="40px 0">
+                <Flex justifyContent="center" alignItems="center" gap={10} w="100%">
+                    <Text className={style.horizontalLineBox}>
+                        <Text className={style.horizontalLine}></Text>
+                        <Text className={style.redCircle}></Text>
+                    </Text>
+                    <Text align="center" fontSize="32px" color="#787676" minW="max-content">
+                        We Make A Difference
+                    </Text >
+                    <Text className={style.horizontalLineBox}>
+                        <Text className={style.redCircle}></Text>
+                        <Text className={style.horizontalLine}></Text>
+                    </Text>
+                </Flex>
+                <Flex textAlign="center" p="0 10%" mt="40px" justifyContent="space-between">
+                    <Box>
+                        <Circle size="170px" bg='white' color='#fd3752' border="2px solid #fd3752" m="0 auto 15px auto" fontSize="40px" lineHeight="170px">
+                            ₹130 cr+
+                        </Circle>
+                        <Text fontSize="22px">Brokerage saved monthly</Text>
+                    </Box>
+                    <Box>
+                        <Circle size="170px" bg='white' color='#fd3752' border="2px solid #fd3752" m="0 auto 15px auto" fontSize="40px" lineHeight="170px">
+                            30 Lakh+
+                        </Circle>
+                        <Text fontSize="22px">Customers Connected Monthly</Text>
+                    </Box>
+                    <Box>
+                        <Circle size="170px" bg='white' color='#fd3752' border="2px solid #fd3752" m="0 auto 15px auto" fontSize="40px" lineHeight="170px">
+                            2 Lakh+
+                        </Circle>
+                        <Text fontSize="22px">New Listings Monthly</Text>
                     </Box>
                 </Flex>
             </Box>
