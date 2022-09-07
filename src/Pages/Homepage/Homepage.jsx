@@ -11,13 +11,25 @@ import {
     Button,
     Input,
 } from "@chakra-ui/react";
-import { Link as chakraLink } from "@chakra-ui/react";
 import nIcon from "../../Images/Homepage/nIcon.png";
 import { Link, Route, Routes } from "react-router-dom";
 import BuyOption from "./BuyOption";
 import RentOption from "./RentOption";
 import CommercialOption from "./CommercialOption";
 import savings from "../../Images/Homepage/savings.png";
+import builderProject from "../../Images/Homepage/builderProject.png";
+import saleAgree from "../../Images/Homepage/saleAgree.png";
+import homeLoan from "../../Images/Homepage/homeLoan.png";
+import propertySarvices from "../../Images/Homepage/propertyServices.png";
+import homeInter from "../../Images/Homepage/homeInteriors.svg";
+import noBrokerNri from "../../Images/Homepage/noBrokerNri.png";
+
+import avoidBroker from "../../Images/Homepage/avoidBrokers.png"
+import freeListing from "../../Images/Homepage/freeLisiting.png";
+import shortlist from "../../Images/Homepage/shortlist.png";
+import rentalAgree from "../../Images/Homepage/rental.png"
+
+import building from "../../Images/Homepage/building.png"
 
 function Homepage() {
     const [selectedOpt, setSelectedOpt] = React.useState("Buy");
@@ -131,7 +143,7 @@ function Homepage() {
                 justifyContent="center"
                 alignItems="center"
                 color="#fff"
-                m="30px 0"
+                m="30px 0 5px 0"
                 gap={2}
                 fontSize="14px"
             >
@@ -140,8 +152,10 @@ function Homepage() {
                     Do you know how much <Text as="b">loan</Text> you can get? Get maximum
                     with <Text as="b">NoBroker</Text>
                 </Text>
-                {/* <Link href="https://www.nobroker.in/prophub/home-loan/check-eligibility/?nbFr=HOME-BANNER-BUY&utm_medium=homepage&utm_source=desktopBanner"> */}
-                <a href="https://www.nobroker.in/prophub/home-loan/check-eligibility/?nbFr=HOME-BANNER-BUY&utm_medium=homepage&utm_source=desktopBanner" target="_blank">
+                <a
+                    href="https://www.nobroker.in/prophub/home-loan/check-eligibility/?nbFr=HOME-BANNER-BUY&utm_medium=homepage&utm_source=desktopBanner"
+                    target="_blank"
+                >
                     <Button
                         color="#464646"
                         bgColor="#fff"
@@ -153,8 +167,100 @@ function Homepage() {
                         Check Eligibility
                     </Button>
                 </a>
-                {/* </Link> */}
             </Flex>
+            <Flex className={style.optiosWithIcon}>
+                <Box>
+                    <Text>New</Text>
+                    <Image src={builderProject} alt="builderProject"></Image>
+                    <Text>Builder Projects</Text>
+                </Box>
+                <Box>
+                    <Text>New</Text>
+                    <Image src={saleAgree} alt="saleAgree"></Image>
+                    <Text>Sale Agreement</Text>
+                </Box>
+                <Box>
+                    <Text visibility="hidden"></Text>
+                    <Image src={homeLoan} alt="homeLoan"></Image>
+                    <Text>Home Loan</Text>
+                </Box>
+                <Box>
+                    <Text visibility="hidden"></Text>
+                    <Image src={propertySarvices} alt="propertySarvices"></Image>
+                    <Text>Property Legal Services</Text>
+                </Box>
+                <Box>
+                    <Text>Sale is live!</Text>
+                    <Image src={homeInter} alt="homeInter"></Image>
+                    <Text>Home Interiors</Text>
+                </Box>
+                <Box>
+                    <Text visibility="hidden"></Text>
+                    <Image src={noBrokerNri} alt="noBrokerNri"></Image>
+                    <Text>NoBroker for NRI’s</Text>
+                </Box>
+            </Flex>
+            <Flex mt="30px" justifyContent="center" alignItems="center" gap={10}>
+                <Text className={style.horizontalLineBox}>
+                    <Text className={style.horizontalLine}></Text>
+                    <Text className={style.redCircle}></Text>
+                </Text>
+                <Text align="center" fontSize="32px" color="#787676" minW="max-content" >
+                    Why Use NoBroker
+                </Text >
+                <Text className={style.horizontalLineBox}>
+                    <Text className={style.redCircle}></Text>
+                    <Text className={style.horizontalLine}></Text>
+                </Text>
+            </Flex>
+            <Grid className={style.whyUseNoBroker}>
+                <Box>
+                    <Image src={avoidBroker} alt="avoidBroker" />
+                    <Text>Avoid Brokers</Text>
+                    <Text>We directly connect you to verified <br /> owners to save brokerage</Text>
+                </Box>
+                <Box>
+                    <Image src={freeListing} alt="freeListing" />
+                    <Text>Free Listing</Text>
+                    <Text>Easy listing process. Also <br /> using WhatsApp</Text>
+                </Box>
+                <Box>
+                    <Image src={shortlist} alt="shortlist" />
+                    <Text>Shortlist without Visit</Text>
+                    <Text>Extensive Information <br /> makes it easy</Text>
+                </Box>
+                <Box>
+                    <Image src={rentalAgree} alt="rentalAgree" />
+                    <Text>Rental Agreement</Text>
+                    <Text>Assistance in creating Rental <br /> agreement & Paper work</Text>
+                </Box>
+            </Grid>
+
+            <Box className={style.enquiryNow}>
+                <Flex justifyContent="center" alignItems="center" gap={10} w="100%">
+                    <Text className={style.horizontalLineBox}>
+                        <Text className={style.horizontalLine}></Text>
+                        <Text className={style.redCircle}></Text>
+                    </Text>
+                    <Text align="center" fontSize="32px" color="#787676" minW="max-content">
+                        NoBroker Business Assist Plan For Builders
+                    </Text >
+                    <Text className={style.horizontalLineBox}>
+                        <Text className={style.redCircle}></Text>
+                        <Text className={style.horizontalLine}></Text>
+                    </Text>
+                </Flex>
+                <Flex alignItems="center" justifyContent='center' mt="40px">
+                    <Box>
+                        <Image src={building} alt="building" />
+                    </Box>
+                    <Box ml="120px">
+                        <Text fontSize="18px" fontWeight="400">Get in touch with us to Sell or Rent Your Projects</Text>
+                        <a href="https://www.nobroker.in/prophub/builders/builders/" target="_blank" className={style.enquiryBtn}>Enquire Now</a>
+                        <Text fontSize="14px" p="2px 0" borderTop="1px solid #ccc">For Builder Enquiries: +91 91080 50400</Text>
+                    </Box>
+                </Flex>
+            </Box>
         </Box>
     );
 }
