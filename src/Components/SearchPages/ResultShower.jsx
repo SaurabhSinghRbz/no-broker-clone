@@ -10,7 +10,7 @@ export const ResultShower = () => {
 
 
     return (
-        <div style={{backgroundColor:'white',padding:'1%',marginTop:'1%',borderTop:'0.1px solid gainsboro'}}>
+        <div style={{backgroundColor:'white',padding:'1%',marginTop:'1%',borderTop:'0.1px solid gainsboro',marginBottom:'2%'}}>
             <div>
                 <span style={{fontSize:'90%',fontWeight:'300'}}>Home / Delhi / Telibara</span>
                 <span style={{marginLeft:'50%', fontSize:'90%',fontWeight:'300'}}>
