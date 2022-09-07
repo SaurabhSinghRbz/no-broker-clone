@@ -1,0 +1,75 @@
+body html {
+    color: #464646;
+    font-size: 14px;
+    font-family: Source Sans Pro, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+
+.homepageContainer {
+    padding-top: 70px;
+    padding: 91px 20px 30px 20px;
+    background-color: #fdfdfd;
+}
+
+.homeTitle {
+    font-size: 32px;
+    font-weight: 400;
+    color: #787676;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-top: 40px;
+}
+
+.nIcon {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    color: #464646;
+    font-size: 14px;
+    font-family: Source Sans Pro, sans-serif;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 3px;
+    background-color: rgba(252, 178, 68, .2);
+}
+
+.nIcon>img {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    transition: .2s;
+    animation: scale 1s ease-in-out infinite;
+}
+
+@keyframes scale {
+    to {
+        transform: scale(1.3);
+    }
+}
+
+.buyRent {
+    width: 370px;
+    background-color: #fcfcfc;
+    margin: 30px auto 0;
+    border: solid #efefef;
+    border-width: 1px 1px 0;
+    border-radius: 4px 4px 0 0;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.buyRent>div {
+    text-align: center;
+    border-right: 1px solid #efefef;
+    border-top-left-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #afaaaa;
+    text-decoration: none;
+}
