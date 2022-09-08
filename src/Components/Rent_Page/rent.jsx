@@ -1,11 +1,13 @@
 import React from 'react'
 import Detail from './detailshow'
 import DetailAdd from './detailAdd'
+import {Info, Paymentinfo} from './components/info';
 import {
   Flex,
   Container,
   Box,
 } from '@chakra-ui/react';
+import Testimonoals from './components/testimonoals';
 
 //install this :- npm install react-slick --save 
 //             :- npm install slick-carousel --save
@@ -20,11 +22,12 @@ export default function Rent() {
   return (
     <div>
       <Flex display='flex' bg='#004daa' justify="space-between" p="50px"  >
-          {/* <Box bg='#004daa' > */}
               <Detail/>
               <DetailAdd/>
-          {/* </Box> */}
       </Flex>
+      <Info/>
+      <Paymentinfo/>
+      <Testimonoals/>
     </div>
   
   

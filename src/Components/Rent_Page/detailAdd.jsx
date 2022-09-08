@@ -25,7 +25,7 @@ export default function DetailAdd() {
     <div>
        
           <Container bg="#FFFF"  w="569px" p="35px" m="20px 0 20px 0" display="flex" flexDirection="column" justifyContent="center"  borderRadius="10px" color="#CECAC3">
-            <Image src={img}/>
+
             <Sliders/>
             <FormControl  color="#000" >
               <FormLabel  pt="20px">Name</FormLabel>

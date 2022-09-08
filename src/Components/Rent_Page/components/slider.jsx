@@ -31,19 +31,19 @@ export default function Sliders()  {
             <Text fontSize="13px">House Rent</Text>
         </Container>
         <Container>
-        <Box display="flex">
+            <Box display="flex">
               <Image src="https://assets.nobroker.in/nb-new/public/RentoPay/school.svg"/>
             </Box>
             <Text fontSize="13px">School/College Fees</Text>
         </Container>
         <Container>
-        <Box display="flex">
+            <Box display="flex">
               <Image src="https://assets.nobroker.in/nb-new/public/RentoPay/tuition.svg"/>
             </Box>
             <Text fontSize="13px">Tuition Fess</Text>
         </Container>
         <Container>
-        <Box display="flex">
+            <Box display="flex">
               <Image src="https://assets.nobroker.in/nb-new/public/RentoPay/maintenance.svg"/>
             </Box>
             <Text fontSize="13px">Society Maintenance</Text>
