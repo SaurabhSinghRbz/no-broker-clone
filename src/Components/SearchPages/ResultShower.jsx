@@ -4,9 +4,6 @@ import Select from '@mui/material/Select';
 
 export const ResultShower = (props) => {
 
-    const [age, setAge] = React.useState('');
-
-    console.log(age)
 
 
     return (
@@ -16,13 +13,13 @@ export const ResultShower = (props) => {
                 <span style={{marginLeft:'50%', fontSize:'90%',fontWeight:'300'}}>
                     Sort By:
                     <Select
-                        value={age}
+                        value={props.order}
                         style={{width:'9rem',marginLeft:'1%',border:'none'}}
                         label=''
-                        onChange={(e)=>setAge(e.target.value)}
+                        onChange={(e)=>props.func(e.target.value)}
                     >
-                        <MenuItem value={'increasing'}>Low to High</MenuItem>
-                        <MenuItem value={'decreasing'}>High to Low</MenuItem>
+                        <MenuItem value={'asc'}>Low to High</MenuItem>
+                        <MenuItem value={'desc'}>High to Low</MenuItem>
                         <MenuItem value={''}>Clear</MenuItem>
                     </Select>
                 </span>

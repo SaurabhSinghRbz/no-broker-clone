@@ -46,7 +46,7 @@ export const DataCard = (props) => {
                     <span className='price-span'>
                         <div>
                             <center>
-                                <p className='var-price-tag'>{props.item.total_square_feet_price}</p>
+                                <p className='var-price-tag'>₹ {props.item.total_square_feet_price} lacs</p>
                                 <p className='con-price-tag'>Price</p>
                             </center>
                         </div>

@@ -9,6 +9,14 @@ import { QuickLinksSearchPage } from '../../Components/SearchPages/QuickLinksSea
 
 export const SearchPage = () => {
     const [apartType,setApartType] = useState('');
+
+    const [order,setOrder] = useState('');
+
+    const handleOrder = (orderType) => {
+        setOrder(orderType);
+        console.log('setting order');
+    }
+
     const [searchedCity,setSearchedCity] = useState('');
     const handleApartmentType = (type) => {
         setApartType(type);
@@ -23,13 +31,13 @@ export const SearchPage = () => {
     const [data,setData] = useState([])
     const fetchData = () => {
         if(searchedCity===''){
-            fetch(`http://localhost:8080/houses`)
+            fetch(`http://localhost:8080/houses?_sort=total_square_feet_price&_order=${order}`)
             .then((res)=>res.json())
             .then((res)=>setData(res))
             .catch((err)=>console.log(err))    
         }
         else{
-            fetch(`http://localhost:8080/houses?city=${searchedCity}`)
+            fetch(`http://localhost:8080/houses?city=${searchedCity}&_sort=total_square_feet_price&_order=${order}`)
                 .then((res)=>res.json())
                 .then((res)=>setData(res))
                 .catch((err)=>console.log(err))
@@ -38,7 +46,7 @@ export const SearchPage = () => {
     }
     React.useEffect(()=>{
         fetchData();
-    },[searchedCity])
+    },[searchedCity,order])
 
   return (
     <div>
@@ -48,7 +56,7 @@ export const SearchPage = () => {
             <FilterForSearchPage setType={handleApartmentType}/>
         </div>
         <div>
-            <ResultShower item={data}/>
+            <ResultShower item={data} func={handleOrder} label={order}/>
             {
                 data.filter((el)=>{
                     if(apartType===''){
