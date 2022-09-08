@@ -10,7 +10,6 @@ import {
     Text,
     Button,
     Input,
-    Center,
     Circle,
 } from "@chakra-ui/react";
 import nIcon from "../../Images/Homepage/nIcon.png";
@@ -34,6 +33,9 @@ import rentalAgree from "../../Images/Homepage/rental.png"
 import building from "../../Images/Homepage/building.png"
 import OurCoustomerReview from "./OurCoustomerReview";
 
+import mobile from "../../Images/Homepage/mobile.png"
+import playStore from "../../Images/Homepage/playStore.png";
+import appleStore from "../../Images/Homepage/iosDownload.svg"
 
 function Homepage() {
     const [selectedOpt, setSelectedOpt] = React.useState("Buy");
@@ -312,6 +314,31 @@ function Homepage() {
                 <OurCoustomerReview />
                 <Text align="center" textDecoration="underline"><a href="/testimonials/" target="_blank" rel="noreferrer">More Testimonials</a></Text>
             </Box>
+
+            <Flex className={style.mobileIconBox}>
+                <Box>
+                    <Image src={mobile} alt="mobile" />
+                </Box>
+                <Box ml="120px">
+                    <Text fontSize="32px" fontWeight="400" color="#fd3752">Find A New Home On The Go</Text>
+                    <Box m="30px 0">
+                        <Text fontSize="22px">Download our app</Text>
+                        <Text fontSize="18px" fontWeight="300">Where convenience is at your fingertip</Text>
+                    </Box>
+                    <Flex>
+                        <Text m="35px 20px 35px 0">
+                            <a href="https://www.nobroker.in/app?type=Android" target="_blank">
+                                <Image src={playStore} alt="playStore" h="55px !important" />
+                            </a>
+                        </Text>
+                        <Text m="29px 0">
+                            <a href="https://apps.apple.com/nz/app/nobroker-house-for-rent/id1200507100?referrer=utm_source%3Dnobroker&utm_medium=website" target="_blank">
+                                <Image src={appleStore} alt="appleStore" h="70px !important" />
+                            </a>
+                        </Text>
+                    </Flex>
+                </Box>
+            </Flex>
 
         </Box>
     );

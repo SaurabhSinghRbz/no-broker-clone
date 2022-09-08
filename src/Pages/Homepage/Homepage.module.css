@@ -303,3 +303,17 @@ option {
     max-height: 140px;
     overflow: hidden;
 }
+
+
+
+.mobileIconBox {
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobileIconBox img {
+    max-width: 80%;
+    height: auto;
+    display: inline-block;
+}
