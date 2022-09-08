@@ -108,7 +108,7 @@ option {
 }
 
 .searchInput>input {
-    width: 500px;
+    width: 540px;
     height: 50px;
     font-size: 16px;
     border-radius: 0;
@@ -123,7 +123,7 @@ option {
     padding: 12px 20px;
     font-size: 18px;
     z-index: 1;
-    width: 200px;
+    width: 180px;
     border-radius: 0 4px 0 0 !important;
     font-weight: 400;
 }

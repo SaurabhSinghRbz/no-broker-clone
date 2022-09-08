@@ -88,7 +88,7 @@ function Homepage() {
                         <Select
                             placeholder="Select a city"
                             size="lg"
-                            w={"200px"}
+                            w={"180px"}
                             focusBorderColor="red"
                         >
                             <option value="Mumbai">Mumbai</option>
@@ -328,12 +328,12 @@ function Homepage() {
                     <Flex>
                         <Text m="35px 20px 35px 0">
                             <a href="https://www.nobroker.in/app?type=Android" target="_blank">
-                                <Image src={playStore} alt="playStore" h="55px !important" />
+                                <Image src={playStore} alt="playStore" h="55px !important" w="220px" />
                             </a>
                         </Text>
-                        <Text m="29px 0">
+                        <Text m="28px 0">
                             <a href="https://apps.apple.com/nz/app/nobroker-house-for-rent/id1200507100?referrer=utm_source%3Dnobroker&utm_medium=website" target="_blank">
-                                <Image src={appleStore} alt="appleStore" h="70px !important" />
+                                <Image src={appleStore} alt="appleStore" h="70px !important" w="220px" />
                             </a>
                         </Text>
                     </Flex>
