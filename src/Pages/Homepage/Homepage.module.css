@@ -1,7 +1,7 @@
 body html {
-    color: #464646;
+    color: #464646 !important;
     font-size: 14px;
-    font-family: Source Sans Pro, sans-serif;
+    font-family: Source Sans Pro, sans-serif !important;
     box-sizing: border-box;
     scroll-behavior: smooth;
     margin: 0;
@@ -108,7 +108,7 @@ option {
 }
 
 .searchInput>input {
-    width: 500px;
+    width: 540px;
     height: 50px;
     font-size: 16px;
     border-radius: 0;
@@ -123,13 +123,13 @@ option {
     padding: 12px 20px;
     font-size: 18px;
     z-index: 1;
-    width: 200px;
+    width: 180px;
     border-radius: 0 4px 0 0 !important;
     font-weight: 400;
 }
 
 .searchButton:hover {
-    background-color: #d72f45;
+    background-color: #d72f45 !important;
 }
 
 .filterBox {
@@ -157,4 +157,202 @@ option {
     padding: 7px 25px;
     width: fit-content;
     margin: auto;
+}
+
+
+.optiosWithIcon {
+    flex-wrap: wrap;
+    align-items: baseline;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.optiosWithIcon>div {
+    padding: 10px 15px;
+    cursor: pointer;
+    /* text-decoration: none !important; */
+    /* width: 16.6667%; */
+}
+
+.optiosWithIcon>div img:hover {
+    cursor: pointer;
+    transition-duration: 0.4s;
+    transform: scale(1.2);
+}
+
+.optiosWithIcon>div>:first-child {
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    color: #464646;
+    margin-bottom: 6px;
+    background-color: #ffefd9;
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.optiosWithIcon>div>:last-child {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.optiosWithIcon img {
+    display: block;
+    margin: auto;
+    height: 60px;
+    width: 60px;
+    max-width: 100%;
+}
+
+.horizontalLineBox {
+    display: flex;
+    opacity: .5;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.horizontalLine {
+    height: 1px;
+    width: 100%;
+    background-color: #707070;
+}
+
+.redCircle {
+    height: 20px;
+    width: 20px;
+    border: 1px solid red;
+    border-radius: 50%;
+}
+
+.whyUseNoBroker {
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 40px;
+    margin: 40px;
+}
+
+.whyUseNoBroker img {
+    margin: auto;
+}
+
+.whyUseNoBroker img:hover {
+    cursor: pointer;
+    transition-duration: 0.4s;
+    transform: scale(1.2);
+}
+
+.whyUseNoBroker>div>:nth-child(2) {
+    margin-top: 8px;
+    font-size: 17px;
+}
+
+.whyUseNoBroker>div>:last-child {
+    font-size: 14px;
+}
+
+.enquiryNow {
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.enquiryBtn {
+    margin-top: 30px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #fd3752;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+.reviewBox {
+    padding: 40px;
+    color: #fff;
+    background-color: #334a5c;
+
+}
+
+.reviewBox iframe {
+    display: inline;
+    width: 560px;
+    height: 320px;
+    vertical-align: middle;
+}
+
+
+
+.userAvatarBox>img {
+    height: 35px;
+    width: 35px;
+    border-radius: 100px;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.ratting_star {
+    display: inline;
+    width: 14px;
+    color: #009587;
+}
+
+.descriptionBox {
+    margin-top: 20px;
+    max-height: 140px;
+    overflow: hidden;
+}
+
+
+
+.mobileIconBox {
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobileIconBox img {
+    max-width: 80%;
+    height: auto;
+    display: inline-block;
+}
+
+.radioBtnBox>label>:last-child {
+    font-size: 12px !important;
+}
+
+
+.apartmentType {
+    border: 1px solid #e2e2e2 !important;
+    font-size: 12px !important;
+    border-radius: 0;
+    background-color: #fcfcfc;
+}
+
+
+.menuItems {
+    min-width: fit-content !important;
+    padding: 0;
+    border-radius: 0 !important;
+    border: 1px solid #e2e2e2 !important;
+    padding-right: 10px !important;
+}
+
+.menuItems2 {
+    width: 100px;
+    padding: 0;
+    border-radius: 0 !important;
+    border: 1px solid #e2e2e2 !important;
+    padding-right: 10px !important;
+}
+
+.menuItems button>label>:last-child {
+    font-size: 14px !important;
+
+}
+
+.menuItems2>button {
+    font-size: 14px !important;
+
 }

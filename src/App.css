@@ -4,3 +4,50 @@
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  height: 25px !important;
+  width: 25px !important;
+  padding: 4px !important;
+  background-color: #fff !important;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px #ccc;
+  background-image: url('https: //cdn-icons-png.flaticon.com/512/109/109618.png') !important;
+  vertical-align: middle !important;
+}
+
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 15px !important;
+  color: black !important;
+  font-weight: bold;
+}
+
+.swiper-slide {
+  margin: 5%px !important;
+  width: 85%;
+}
+
+.swiper-container {
+  margin: 40px 0px !important;
+}
+
+
+.css-1ozmk1d {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  background: #fff;
+  /* box-shadow: var(--chakra-shadows-sm); */
+  min-height: max-content !important;
+  color: inherit;
+  /* min-width: var(--chakra-sizes-3xs); */
+  /* padding-top: var(--chakra-space-2);
+    padding-bottom: var(--chakra-space-2); */
+  z-index: 1;
+  /* border-radius: var(--chakra-radii-md); */
+  border-width: 1px;
+}
