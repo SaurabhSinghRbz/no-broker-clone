@@ -15,12 +15,12 @@ export default function Detail() {
   return (
     <div>
         <Container color="#FFFFFF">
-        <Container p={2} m="0px">
-            <Heading as='h3'size='lg' p={4}  >
+        <Container p={2} m="0px" >
+            <Heading fontSize="26px" p={4}  >
                 Pay Rent and Fees with Credit Card
   
             </Heading>
-            <Button bg="#202A76" p="25px" m="15px" >
+            <Button bg="#202A76" p="25px" m="15px">
                 <img src="https://assets.nobroker.in/nb-new/public/RentoPay/verified-icon.svg" alt="" />
                 <Text>Lowest Charges. Instant Transfers.</Text>
             </Button>

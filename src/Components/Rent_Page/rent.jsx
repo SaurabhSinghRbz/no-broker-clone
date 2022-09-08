@@ -1,6 +1,7 @@
 import React from 'react'
 import Detail from './detailshow'
 import DetailAdd from './detailAdd'
+import Question from './components/question';
 import {Info, Paymentinfo} from './components/info';
 import {
   Flex,
@@ -28,6 +29,7 @@ export default function Rent() {
       <Info/>
       <Paymentinfo/>
       <Testimonoals/>
+      <Question/>
     </div>
   
   
