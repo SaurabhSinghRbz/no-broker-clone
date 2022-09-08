@@ -317,3 +317,42 @@ option {
     height: auto;
     display: inline-block;
 }
+
+.radioBtnBox>label>:last-child {
+    font-size: 12px !important;
+}
+
+
+.apartmentType {
+    border: 1px solid #e2e2e2 !important;
+    font-size: 12px !important;
+    border-radius: 0;
+    background-color: #fcfcfc;
+}
+
+
+.menuItems {
+    min-width: fit-content !important;
+    padding: 0;
+    border-radius: 0 !important;
+    border: 1px solid #e2e2e2 !important;
+    padding-right: 80px !important;
+}
+
+.menuItems2 {
+    width: 100px;
+    padding: 0;
+    border-radius: 0 !important;
+    border: 1px solid #e2e2e2 !important;
+    padding-right: 10px !important;
+}
+
+.menuItems button>label>:last-child {
+    font-size: 14px !important;
+
+}
+
+.menuItems2>button {
+    font-size: 14px !important;
+
+}

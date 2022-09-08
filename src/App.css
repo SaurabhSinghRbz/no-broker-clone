@@ -35,3 +35,19 @@
 .swiper-container {
   margin: 40px 0px !important;
 }
+
+
+.css-1ozmk1d {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  background: #fff;
+  /* box-shadow: var(--chakra-shadows-sm); */
+  min-height: max-content !important;
+  color: inherit;
+  /* min-width: var(--chakra-sizes-3xs); */
+  /* padding-top: var(--chakra-space-2);
+    padding-bottom: var(--chakra-space-2); */
+  z-index: 1;
+  /* border-radius: var(--chakra-radii-md); */
+  border-width: 1px;
+}
