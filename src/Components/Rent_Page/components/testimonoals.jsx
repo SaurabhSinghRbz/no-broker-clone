@@ -7,6 +7,7 @@ import {
     Box,
     Heading,
 } from '@chakra-ui/react';
+import style from "../rent.module.css";
 
 
 export default function Testimonoals() {
@@ -23,11 +24,11 @@ export default function Testimonoals() {
       return (
         <Box w="100%">
             <Container textAlign="center">
-                <Heading m="0" p="50px">NoBroker Packers and Movers Reviews</Heading>
-                <Text m="0" p="20px" >Testimonials from our NoBroker Pay customers</Text>
+                <Heading m="0" p="40px">NoBroker Packers and Movers Reviews</Heading>
+                <Text m="0" pb="20px" >Testimonials from our NoBroker Pay customers</Text>
             </Container>
-          <Slider {...settings}>
-            <Container bg="#202324" m="0" p="15px" ml="30px">
+          <Slider {...settings} className={style.testimonoals}>
+            <Container  m="0" p="15px" ml="30px">
                 <Text color="blue">--</Text>
                 <Text fontSize="sm">
                     "NoBroker Pay has helped me immensely to manage my finances better. Now I am able to earn vouchers worth approximately 30K using my Amex Platinum Travel card. You need to choose your credit card carefully to get the maximum benefit." →
@@ -37,7 +38,7 @@ export default function Testimonoals() {
                     <Text p="5px"  fontSize="sm">Arjun Tendulkar</Text>
                 </Box>
             </Container>
-            <Container bg="#202324" ml="30px">
+            <Container  ml="30px">
                 <Text color="blue">--</Text>
                 <Text fontSize="sm">
                     "I think I am one of the first customers of NoBroker Pay. I feel financially secure paying my rent through credit card. I invest in mutual funds every month and now I have extra cash of 24000 (my house rent) which I can invest because of the 50 day interest free period provided by my credit card."
@@ -47,7 +48,7 @@ export default function Testimonoals() {
                     <Text p="5px" fontSize="sm">Karthik Kulkarni</Text>
                 </Box>
             </Container>
-            <Container bg="#202324" ml="30px">
+            <Container  ml="30px">
                 <Text color="blue">--</Text>
                 <Text fontSize="sm">
                     "I am really excited about using NoBroker Pay. I had paid my house rent through my credit card. The entire process is so seamless. My landlord too got an instant notification.
@@ -58,7 +59,7 @@ export default function Testimonoals() {
                     <Text  p="5px" fontSize="sm">Jyothi Dave</Text>
                 </Box>
             </Container>
-            <Container bg="#202324" ml="30px" >
+            <Container ml="30px" >
                 <Text color="blue">--</Text>
                 <Text fontSize="sm">
                     "I think I am one of the first customers of NoBroker Pay. I feel financially secure paying my rent through credit card. I invest in mutual funds every month and now I have extra cash of 24000 (my house rent) which I can invest because of the 50 day interest free period provided by my credit card."

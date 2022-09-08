@@ -1,5 +1,4 @@
 import React from 'react'
-import img from '../../Images/Rent.png'
 import {
   Input ,
   FormControl,
@@ -14,15 +13,15 @@ import {
 import Sliders from './components/slider'
 import { Routes, Route } from 'react-router-dom'
 import { Yourinput, Studentinput  } from './components/Input'
+import style from './rent.module.css'
+import Payment from './payment'
 
 export default function DetailAdd() {
-
- 
 
   return (
     <div>
        
-          <Container bg="#FFFF"  w="569px" p="35px" m="20px 0 20px 0" display="flex" flexDirection="column" justifyContent="center"  borderRadius="10px" color="#CECAC3">
+          <Container className={style.ConChildTwo} bg="#FFFF"   color="#CECAC3">
 
             <Sliders/>
             <Routes>

@@ -12,6 +12,7 @@ import {
 
 
 export default function Sliders()  {
+  const [selectedBg, setSelectedBg] = React.useState(1);
   const settings = {
     className: "center",
     centerMode: true,
@@ -23,49 +24,53 @@ export default function Sliders()  {
 
   return (
     <div>
-      <Box p="20px"   color="#000">
-      <Slider {...settings} className={styled.center} >
-        <Link to="/rent/houserent">
-            <Box display="flex">
-              <Image src="https://assets.nobroker.in/nb-new/public/RentoPay/home.svg"/>
-            </Box>
-            <Text fontSize="13px">House Rent</Text>
+      <Box p="20px" >
+      <Slider {...settings} className={styled.Sliderfirst}  >
+        
+        <Link to="/rent/houserent"  className={styled.link}>
+          <Box display="flex">
+            <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/home.svg"/>
+          </Box>
+            <Text fontSize="13px" onClick={() => setSelectedBg(1)} style={selectedBg === 1 ? { borderBottom: "3px solid blue" } : {}}>House Rent</Text>
+             
         </Link>
-        <Link to="/rent/schoolfees">
-            <Box display="flex">
-              <Image src="https://assets.nobroker.in/nb-new/public/RentoPay/school.svg"/>
-            </Box>
-            <Text fontSize="13px">School/College Fees</Text>
+        
+        <Link to="/rent/schoolfees" className={styled.link} >
+          <Box display="flex">
+              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/school.svg"/>
+          </Box>      
+            <Text fontSize="13px" onClick={() => setSelectedBg(2)} style={selectedBg === 2 ? { borderBottom: "3px solid blue" } : {}}>School/College Fees</Text>
+         
         </Link>
-        <Link to="/rent/tuitionfees">
+        <Link to="/rent/tuitionfees" className={styled.link}>
             <Box display="flex">
-              <Image src="https://assets.nobroker.in/nb-new/public/RentoPay/tuition.svg"/>
+              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/tuition.svg"/>
             </Box>
-            <Text fontSize="13px">Tuition Fess</Text>
+            <Text fontSize="13px" onClick={() => setSelectedBg(3)} style={selectedBg === 3 ? { borderBottom: "3px solid blue" } : {}}>Tuition Fess</Text>
         </Link>
-        <Link to="/rent/societymaintenance">
+        <Link to="/rent/societymaintenance" className={styled.link}>
             <Box display="flex">
-              <Image src="https://assets.nobroker.in/nb-new/public/RentoPay/maintenance.svg"/>
+              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/maintenance.svg"/>
             </Box>
-            <Text fontSize="13px">Society Maintenance</Text>
+            <Text fontSize="13px" onClick={() => setSelectedBg(4)} style={selectedBg === 4 ? { borderBottom: "3px solid blue" } : {}}>Society Maintenance</Text>
         </Link>
-        <Link to="/rent/shoprent">
+        <Link to="/rent/shoprent" className={styled.link}>
             <Box display="flex">
-              <Image src="https://assets.nobroker.in/nb-new/public/RentoPay/office.svg"/>
+              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/office.svg"/>
             </Box>
-            <Text fontSize="13px">Office/Shop Rent</Text>
+            <Text fontSize="13px" onClick={() => setSelectedBg(7)} style={selectedBg === 7 ? { borderBottom: "3px solid blue" } : {}}>Office/Shop Rent</Text>
         </Link>
-        <Link to="/rent/property">
+        <Link to="/rent/property" className={styled.link}>
             <Box display="flex">
-              <Image src="https://assets.nobroker.in/nb-new/public/RentoPay/token.svg"/>
+              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/token.svg"/>
             </Box>
-            <Text fontSize="13px">Property Token</Text>
+            <Text fontSize="13px" onClick={() => setSelectedBg(5)} style={selectedBg === 5 ? { borderBottom: "3px solid blue" } : {}}>Property Token</Text>
         </Link>
-        <Link to="/rent/deposite">
-            <Box display="flex">
-              <Image src="https://assets.nobroker.in/nb-new/public/RentoPay/deposit.svg"/>
+        <Link to="/rent/deposite" className={styled.link} >
+            <Box display="flex" >
+              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/deposit.svg"/>
             </Box>
-            <Text fontSize="13px">Property Deposit</Text>
+            <Text fontSize="13px" onClick={() => setSelectedBg(6)} style={selectedBg === 6 ? { borderBottom: "3px solid blue" } : {}}>Property Deposit</Text>
         </Link>
       </Slider>
       </Box>

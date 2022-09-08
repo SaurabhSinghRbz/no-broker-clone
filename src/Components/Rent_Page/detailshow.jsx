@@ -10,10 +10,11 @@ import {
     Heading,
     Text ,
     } from "@chakra-ui/react"
+import style from './rent.module.css'
 
 export default function Detail() {
   return (
-    <div>
+    <div className={style.ConChildOne}>
         <Container color="#FFFFFF">
         <Container p={2} m="0px" >
             <Heading fontSize="26px" p={4}  >

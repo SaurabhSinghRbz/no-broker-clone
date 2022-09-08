@@ -6,25 +6,27 @@ import {
     Image,
     Button,
     Heading,
+    Flex,
 } from '@chakra-ui/react'
+import style from '../rent.module.css';
 
 function Info() {
   return (
     <div>
-        <Container h="478px" w="100%" p="100px 0 100px 0" >
-            <Box display="flex" w="100%"  >
-                <Box p="30px">
-                    <Text p="10px" fontSize="23px">Earn money with NoBroker Pay</Text>
-                    <Text p="10px">Start paying rent using your credit card and earn miles, cashback and reward points.</Text>
+        <Container className={style.InfoContainer}  >
+            <Flex className={style.InfoContainerTwo} alignItems="center" justifyContent="center">
+                <Box  >
+                    <Text pb="10px" fontSize="26px">Earn money with NoBroker Pay</Text>
+                    <Text  fontSize="18px">Start paying rent using your credit card and earn miles, cashback and reward points.</Text>
                 </Box>
-                <Box p="30px" display="flex" alignItems="center" justifyContent="center">
+                <Flex alignItems="center" p="50px" >
                     {/* <Container h="250px" w="250px"> */}
-                         <Image  h="30px" w="30px" src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPaSURBVFhH7VhJaBRREJ0obigeVHBFcMENl4Nb0Ez3xBgJYjK/JxlREDwYclQEQQhovLkjCHoKKt6MKEnmd7uABPWgiCLiRUFBiEEFiRuCCxpf/dRMenoqk5nMYER98CBTXfWquvrX7/4J/cc/jbJab6ml3POW41ayKSsWxVtG8p9ZUVl5bSx0T0K3kU2DAwRabcftgdhjNvnQUxKOactW+hj4CL5vja+jv8D/ha3ctnBU77A3tU/igBTgv418DWPtC9icPyylN4OdtqP3sMkgojwb9jupJFkIv0/gfjveMY7DQ2vj7TPppqB7Ldeu54ampmHo1EEI/5SKyUZ09kmZcuexUvERj7cMRycuSslTVO4P0c7Ezb2L1OjVLFlcoGuHpaQBnhNsacT6fGk73gyWLQ7smF4vJfMT3Xlohka4lkGlr7N0EYB1h0f3QEzkZzQRsZVXJl4TGFbeBs5QGEhIShDgJfLNp0B08YZJUCgwfafFBEza98LVbbPIN58CEfe9tO7qBJOkEEDomZQgReUeYtf8OghGom4th+aCnhIE1WMr2cwGA+pQUDhJTOSrVVXeeHbFpHszLCex1088ymNSbC/1bg41mzcGrbFceXPYlA4r5m3sC0wsJhu9ptIFM1hvgrMg+xLRx9kNby1Xs/0Wm9JhV1+di+69h0NXhbo80di2d4zuE0snbSs04Sa4H9CN0lqT4pkH2BW+7gGyodCjbMoEFbS84f4I/mmAoG4WC7Ib6+95Gh33AocZ0H4XiEkjGtLArgb+93XOoO1AEpeIbt3msJAV9aolHz8tx1vJ7oMHku6UxCUmC6SngPX1VPJJEt3rpME0SQoBrUck+yAlCTJZIE2ndD3AfSZBMYC7bRISZJAKpMmnrxbpepK4/npQ660/0PBguh5Lyfw0BSr3lHTNT9xwjKWLh3InsQzin4PJAuxCkdm2FWIzSxYfmOitWF95f00niUd7t6rKG8VyhaO07sKYiNJR/0sdSY5IyXNg17q6xHSWwTaUCFtRdwn/HBwg2kziKKqDTebTH130fIkHpnK/+j/1EV+VtK+paZ3G5vyBwThBQlhXCTYZ8Du6K1XAAITOLg416D2umvPLR+lYmjN6u+WV0qNmUwqRqFcRLESm9qQNGZO8sKDu5QIU0JJZkI9KfyuvuTKf3X8/zKOmA1V/rHVXsOt/iKA3TFlMz+6PdlxPYdehwUBnEPpKZtehAQ2AVFiS2D/PsusQofefSQ+l4ohFO5wXgrBzZSr2tDPYUt6kilPuTZxHtrDLnwFsyHHzdlD6Hpv+PKyrbpscPHT95QiFfgHxE+RM8gGdsgAAAABJRU5ErkJggg=='/>
+                         <Image  h="50px" w="50px" src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPaSURBVFhH7VhJaBRREJ0obigeVHBFcMENl4Nb0Ez3xBgJYjK/JxlREDwYclQEQQhovLkjCHoKKt6MKEnmd7uABPWgiCLiRUFBiEEFiRuCCxpf/dRMenoqk5nMYER98CBTXfWquvrX7/4J/cc/jbJab6ml3POW41ayKSsWxVtG8p9ZUVl5bSx0T0K3kU2DAwRabcftgdhjNvnQUxKOactW+hj4CL5vja+jv8D/ha3ctnBU77A3tU/igBTgv418DWPtC9icPyylN4OdtqP3sMkgojwb9jupJFkIv0/gfjveMY7DQ2vj7TPppqB7Ldeu54ampmHo1EEI/5SKyUZ09kmZcuexUvERj7cMRycuSslTVO4P0c7Ezb2L1OjVLFlcoGuHpaQBnhNsacT6fGk73gyWLQ7smF4vJfMT3Xlohka4lkGlr7N0EYB1h0f3QEzkZzQRsZVXJl4TGFbeBs5QGEhIShDgJfLNp0B08YZJUCgwfafFBEza98LVbbPIN58CEfe9tO7qBJOkEEDomZQgReUeYtf8OghGom4th+aCnhIE1WMr2cwGA+pQUDhJTOSrVVXeeHbFpHszLCex1088ymNSbC/1bg41mzcGrbFceXPYlA4r5m3sC0wsJhu9ptIFM1hvgrMg+xLRx9kNby1Xs/0Wm9JhV1+di+69h0NXhbo80di2d4zuE0snbSs04Sa4H9CN0lqT4pkH2BW+7gGyodCjbMoEFbS84f4I/mmAoG4WC7Ib6+95Gh33AocZ0H4XiEkjGtLArgb+93XOoO1AEpeIbt3msJAV9aolHz8tx1vJ7oMHku6UxCUmC6SngPX1VPJJEt3rpME0SQoBrUck+yAlCTJZIE2ndD3AfSZBMYC7bRISZJAKpMmnrxbpepK4/npQ660/0PBguh5Lyfw0BSr3lHTNT9xwjKWLh3InsQzin4PJAuxCkdm2FWIzSxYfmOitWF95f00niUd7t6rKG8VyhaO07sKYiNJR/0sdSY5IyXNg17q6xHSWwTaUCFtRdwn/HBwg2kziKKqDTebTH130fIkHpnK/+j/1EV+VtK+paZ3G5vyBwThBQlhXCTYZ8Du6K1XAAITOLg416D2umvPLR+lYmjN6u+WV0qNmUwqRqFcRLESm9qQNGZO8sKDu5QIU0JJZkI9KfyuvuTKf3X8/zKOmA1V/rHVXsOt/iKA3TFlMz+6PdlxPYdehwUBnEPpKZtehAQ2AVFiS2D/PsusQofefSQ+l4ohFO5wXgrBzZSr2tDPYUt6kilPuTZxHtrDLnwFsyHHzdlD6Hpv+PKyrbpscPHT95QiFfgHxE+RM8gGdsgAAAABJRU5ErkJggg=='/>
                     {/* </Container> */}
-                    <Text>You can earn up to ₹30,000* by just paying rent for a year by using your credit card.</Text>
-                </Box>
-            </Box>
-            <Text textAlign="center" fontSize="10px">*This is calculated assuming an annual rent of 4.5 Lakhs on a Club Vistara SBI Card PRIME (Premium)</Text>
+                    <Text fontSize="20px" p="10px">You can earn up to ₹30,000* by just paying rent for a year by using your credit card.</Text>
+                </Flex>
+            </Flex>
+            <Text marginTop="70px" w="1000px" fontSize="13px">*This is calculated assuming an annual rent of 4.5 Lakhs on a Club Vistara SBI Card PRIME (Premium)</Text>
         </Container>
     </div>
   )

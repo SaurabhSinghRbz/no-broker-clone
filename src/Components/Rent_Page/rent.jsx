@@ -3,12 +3,16 @@ import Detail from './detailshow'
 import DetailAdd from './detailAdd'
 import Question from './components/question';
 import {Info, Paymentinfo} from './components/info';
+
 import {
   Flex,
   Container,
   Box,
 } from '@chakra-ui/react';
+import style from "./rent.module.css";
 import Testimonoals from './components/testimonoals';
+import { Route, Routes } from 'react-router-dom';
+import Payment from './payment';
 
 //install this :- npm install react-slick --save 
 //             :- npm install slick-carousel --save
@@ -22,14 +26,17 @@ import Testimonoals from './components/testimonoals';
 export default function Rent() {
   return (
     <div>
-      <Flex display='flex' bg='#004daa' justify="space-between" p="50px"  >
-              <Detail/>
-              <DetailAdd/>
+      <Flex className={style.ContainerOne} bg="linear-gradient(#283593,#3f51b5)">
+              {/* <Detail/>
+              <DetailAdd/> */}
+              <Routes>
+                <Route path="/rent/payment" element={<Payment/>}></Route>
+              </Routes>
       </Flex>
-      <Info/>
-      <Paymentinfo/>
-      <Testimonoals/>
-      <Question/>
+      {/* <Info/>
+      <Paymentinfo/> */}
+      {/* <Testimonoals/>
+      <Question/> */}
     </div>
   
   

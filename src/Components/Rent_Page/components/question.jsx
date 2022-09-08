@@ -8,11 +8,13 @@ import {
     AccordionIcon,
     Heading,
 } from '@chakra-ui/react'
+import style from "../rent.module.css"
 
 export default function Question() {
   return (
-    <div>
+    <div className={style.box}>
         <Heading p='70px' textAlign="center" fontSize="30px">Frequently Asked Questions</Heading>
+        <Box pl="100px" pr="100px">
         <Accordion allowToggle>
             <AccordionItem>
                 <h2>
@@ -93,7 +95,9 @@ export default function Question() {
                     When you submit your landlord’s bank details on NoBroker Pay and make your payment, we verify these details and transfer the rent amount directly to your landlord’s bank account. Please note that transfer may take up to 2 working days to reflect in your landlord’s bank account.
                 </AccordionPanel>
             </AccordionItem>
+           
 </Accordion>
+</Box>
     </div>
   )
 }
