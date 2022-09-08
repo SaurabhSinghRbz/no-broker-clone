@@ -10,14 +10,9 @@ import FlagTwoToneIcon from '@mui/icons-material/FlagTwoTone';
 import IosShareIcon from '@mui/icons-material/IosShare';
 import Carousel from 'react-elastic-carousel'
 
-export const DataCard = () => {
+export const DataCard = (props) => {
 
-    const images = [
-        { url: 'https://images.nobroker.in/images/8a9fd6828300090901830018790000af/8a9fd6828300090901830018790000af_21212_720296_thumbnail.jpg' },
-        { url: 'https://images.nobroker.in/images/8a9fd6828300090901830018790000af/8a9fd6828300090901830018790000af_21212_720296_thumbnail.jpg' },
-        { url: 'https://images.nobroker.in/images/8a9fd6828300090901830018790000af/8a9fd6828300090901830018790000af_21212_720296_thumbnail.jpg' },
-        { url: 'https://images.nobroker.in/images/8a9fd6828300090901830018790000af/8a9fd6828300090901830018790000af_21212_720296_thumbnail.jpg' }
-    ]
+    const images = props.item.img;
 
     return (
         <div style={{ backgroundColor: 'white' }}>
@@ -25,34 +20,34 @@ export const DataCard = () => {
                 <div style={{ paddingLeft: '2%', paddingTop: '2%', paddingBottom: '2%', fontWeight: '600' }} >
                     <div>
                         <div style={{ display: 'flex' }}>
-                            <span style={{ fontSize: '100%' }} className='card-house-name-heading'>1 BHK Independent House For Rent In Teliwara, Shahdara  </span>
+                            <span style={{ fontSize: '100%' }} className='card-house-name-heading'>{props.item.apartment_name}</span>
                             <div><span><IosShareIcon style={{ width: '1rem', color: 'black', marginLeft: '0.5rem' }} /></span></div>
                         </div>
-                        <div style={{ color: 'black', fontSize: '90%' }}>Teliwara  <a href="/" style={{ color: 'black', fontSize: '80%' }}>explore info</a></div>
+                        <div style={{ color: 'black', fontSize: '90%' }}>{props.item.city}<a href="/" style={{ color: 'black', fontSize: '80%' }}> explore info</a></div>
                     </div>
                 </div>
                 <div className='price-div'>
                     <span className='price-span'>
                         <div>
                             <center>
-                                <p className='var-price-tag'>500sqft</p>
-                                <p className='con-price-tag'>Builtup</p>
+                                <p className='var-price-tag'>{props.item.parking}</p>
+                                <p className='con-price-tag'>Parking</p>
                             </center>
                         </div>
                     </span>
                     <span className='price-span'>
                         <div>
                             <center>
-                                <p className='var-price-tag'>6000</p>
-                                <p className='con-price-tag'>Deposit</p>
+                                <p className='var-price-tag'>{props.item.emi}</p>
+                                <p className='con-price-tag'>Emi</p>
                             </center>
                         </div>
                     </span>
                     <span className='price-span'>
                         <div>
                             <center>
-                                <p className='var-price-tag'>6000</p>
-                                <p className='con-price-tag'>Rent</p>
+                                <p className='var-price-tag'>{props.item.total_square_feet_price}</p>
+                                <p className='con-price-tag'>Price</p>
                             </center>
                         </div>
                     </span>
@@ -60,11 +55,12 @@ export const DataCard = () => {
                 <div style={{ padding: '2%', display: 'grid', gridTemplateColumns: '35% 65%', height: '11rem' }}>
                     <div className='data-card-image'>
                         <Carousel>
-                            {
-                                images.map((el) => {
-                                    return <img src={el.url} alt='' />
-                                })
-                            }
+                            <img src={images[0]} alt="" style={{height:'9rem',width:'15rem'}}/>
+                            <img src={images[1]} alt="" style={{height:'9rem',width:'15rem'}}/>
+                            <img src={images[2]} alt="" style={{height:'9rem',width:'15rem'}}/>
+                            <img src={images[3]} alt="" style={{height:'9rem',width:'15rem'}}/>
+                            <img src={images[4]} alt="" style={{height:'9rem',width:'15rem'}}/>
+                            <img src={images[5]} alt="" style={{height:'9rem',width:'15rem'}}/>
                         </Carousel>
                     </div>
                     <div style={{ paddingLeft: '10%' }}>
@@ -79,7 +75,7 @@ export const DataCard = () => {
                             <div style={{ display: 'grid', gridTemplateColumns: '10% 80%', padding: '6%' }}>
                                 <div><ApartmentOutlinedIcon style={{ marginTop: '15%' }} /></div>
                                 <div style={{ marginLeft: '10%' }}>
-                                    <div className='var-price-tag'>1 BHK</div>
+                                    <div className='var-price-tag'>{props.item.apartment_type}</div>
                                     <div className='con-price-tag'>Apartment Type</div>
                                 </div>
                             </div>

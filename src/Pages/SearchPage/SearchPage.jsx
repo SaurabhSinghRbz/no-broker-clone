@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../Styles/SearchPages/searchpage.css'
 import { DataCard } from '../../Components/SearchPages/DataCard'
 import { ResultShower } from '../../Components/SearchPages/ResultShower';
@@ -8,33 +8,63 @@ import { AdsSection } from '../../Components/SearchPages/AdsSection';
 import { QuickLinksSearchPage } from '../../Components/SearchPages/QuickLinksSearchPage';
 
 export const SearchPage = () => {
-    const array = ['data1','data2','data3','data4','data5','data6'];
-
+    const [apartType,setApartType] = useState('');
+    const [searchedCity,setSearchedCity] = useState('');
+    const handleApartmentType = (type) => {
+        setApartType(type);
+        console.log(type)
+        console.log(data);
+    }
+    const handleSearchedCity = (cityName) => {
+        setSearchedCity(cityName);
+        console.log('inside handleSearchedCity');
+    }
+    const tempData = 'thane'
+    const [data,setData] = useState([])
     const fetchData = () => {
-        fetch(`http://localhost:8080/city`)
+        if(searchedCity===''){
+            fetch(`http://localhost:8080/houses`)
             .then((res)=>res.json())
-            .then((res)=>console.log(res))
-            .catch((err)=>console.log(err))
+            .then((res)=>setData(res))
+            .catch((err)=>console.log(err))    
+        }
+        else{
+            fetch(`http://localhost:8080/houses?city=${searchedCity}`)
+                .then((res)=>res.json())
+                .then((res)=>setData(res))
+                .catch((err)=>console.log(err))
+        }
+        console.log(data);
     }
     React.useEffect(()=>{
         fetchData();
-    },[])
+    },[searchedCity])
 
   return (
     <div>
-    <SearchBar />    
+    <SearchBar func={handleSearchedCity}/>    
     <div className='search-page-head-div'>
         <div>
-            <FilterForSearchPage />
+            <FilterForSearchPage setType={handleApartmentType}/>
         </div>
         <div>
-            <ResultShower />
+            <ResultShower item={data}/>
             {
-                array.map(()=>{
+                data.filter((el)=>{
+                    if(apartType===''){
+                        return el
+                    }
+                    else{
+                        if(el.apartment_type===apartType){
+                            return el
+                        }
+                    }
+                    
+                }).map((el)=>{
                     return(
-                    <div className='search-page-card-head'>
+                    <div className='search-page-card-head' key={el.id}>
                     <div>
-                        <DataCard />
+                        <DataCard item={el}/>
                     </div>
                     </div>)
                 })

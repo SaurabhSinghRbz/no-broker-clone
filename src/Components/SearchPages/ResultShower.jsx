@@ -2,7 +2,7 @@ import React from 'react'
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 
-export const ResultShower = () => {
+export const ResultShower = (props) => {
 
     const [age, setAge] = React.useState('');
 
@@ -12,7 +12,7 @@ export const ResultShower = () => {
     return (
         <div style={{backgroundColor:'white',padding:'1%',marginTop:'1%',borderTop:'0.1px solid gainsboro',marginBottom:'2%'}}>
             <div>
-                <span style={{fontSize:'90%',fontWeight:'300'}}>Home / Delhi / Telibara</span>
+                <span style={{fontSize:'90%',fontWeight:'300'}}>Home / </span>
                 <span style={{marginLeft:'50%', fontSize:'90%',fontWeight:'300'}}>
                     Sort By:
                     <Select
@@ -27,7 +27,7 @@ export const ResultShower = () => {
                     </Select>
                 </span>
             </div>
-            <div style={{fontSize:'110%'}}>112 - Flats, Apartments for Rent in Telibara, Delhi | Rental Properties in Telibara</div>
+            <div style={{fontSize:'110%'}}>{props.item.length} - Flats, Apartments for Sale in Your Searched Area | Selling Properties in Your Searched Area</div>
         </div>
     )
 }
