@@ -32,6 +32,8 @@ import shortlist from "../../Images/Homepage/shortlist.png";
 import rentalAgree from "../../Images/Homepage/rental.png"
 
 import building from "../../Images/Homepage/building.png"
+import OurCoustomerReview from "./OurCoustomerReview";
+
 
 function Homepage() {
     const [selectedOpt, setSelectedOpt] = React.useState("Buy");
@@ -300,6 +302,17 @@ function Homepage() {
                     </Box>
                 </Flex>
             </Box>
+
+
+            <Box className={style.reviewBox}>
+                <Text align="center" fontSize="32px">Our Customers Loves us</Text>
+                <Box textAlign="center" m="30px 0">
+                    <iframe src="https://www.youtube.com/embed/0ChlgxhXVws" title="nobroekr-testimonial-video" frameborder="0" allow="encrypted-media" allowfullscreen=""></iframe>
+                </Box>
+                <OurCoustomerReview />
+                <Text align="center" textDecoration="underline"><a href="/testimonials/" target="_blank" rel="noreferrer">More Testimonials</a></Text>
+            </Box>
+
         </Box>
     );
 }

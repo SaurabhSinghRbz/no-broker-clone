@@ -267,3 +267,39 @@ option {
     font-weight: 400;
     margin-bottom: 2px;
 }
+
+.reviewBox {
+    padding: 40px;
+    color: #fff;
+    background-color: #334a5c;
+
+}
+
+.reviewBox iframe {
+    display: inline;
+    width: 560px;
+    height: 320px;
+    vertical-align: middle;
+}
+
+
+
+.userAvatarBox>img {
+    height: 35px;
+    width: 35px;
+    border-radius: 100px;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.ratting_star {
+    display: inline;
+    width: 14px;
+    color: #009587;
+}
+
+.descriptionBox {
+    margin-top: 20px;
+    max-height: 140px;
+    overflow: hidden;
+}
