@@ -1,0 +1,147 @@
+.center {
+    color: black;
+}
+
+
+
+/* left  */
+.ConChildOne {
+    margin-top: 40px;
+    /* border: 2px solid red; */
+}
+
+
+
+
+
+/* right input container One */
+.ConChildTwo {
+    /* border: 2px solid red; */
+    width: 569px;
+    padding: 35px;
+    border-radius: 10px;
+    position: relative;
+    top: 70px;
+    /* left: 500px; */
+}
+
+.inputName {
+    border-radius: 3px;
+    border: 1px solid rgb(146, 135, 135);
+}
+
+.Sliderfirst {
+    border-bottom: 1px solid lightgrey;
+    color: #000;
+}
+
+.InputCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 1; */
+}
+
+.link {
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.link>* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.InfoContainer {
+    height: 388px;
+    width: 100%;
+}
+
+.InfoContainerTwo {
+    width: 100%;
+    padding: 30px;
+    height: 220px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+.testimonoals {
+    /* border: 2px solid red !important; */
+    width: 80%;
+    height: 292px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+}
+
+.box {
+    /* border: 1px solid #000; */
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+.paymentInfoContainerPage>* {
+    padding: 15px;
+    /* border: 1px solid; */
+}
+
+.paymentInfoContainerPage {
+    /* border: 5px solid #000; */
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px 0 40px;
+    /* align-items: center; */
+    width: 100%;
+    font-size: 14px;
+    /* border-bottom: 1px solid lightgray; */
+
+}
+
+
+
+
+.paymentInfo_DetailName {
+    height: 64px;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0px 0px 12px 0px;
+}
+
+.paymentInfo_DetailNameTwo {
+    height: 65px;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0px 15px 20px 0px;
+}
+
+.paymentInfo_DetailNameThree {
+    padding: 15px 15px 15px 0px;
+
+}
+
+.paymentInfo_DetailNameFour {
+    padding: 15px 0px 15px 0px;
+    /* border: 1px solid; */
+}
