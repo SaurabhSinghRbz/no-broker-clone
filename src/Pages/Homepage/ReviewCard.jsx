@@ -15,11 +15,11 @@ const ReviewCard = ({ data }) => {
                 <Box verticalAlign="middle" display="inline-block" overflow="hidden">
                     <Text color="#000" fontSize="14px">{data.name}</Text>
                     <Box>
-                        <Image alt="star" src={star} class={style.ratting_star} />
-                        <Image alt="star" src={star} class={style.ratting_star} />
-                        <Image alt="star" src={star} class={style.ratting_star} />
-                        <Image alt="star" src={star} class={style.ratting_star} />
-                        <Image alt="star" src={star} class={style.ratting_star} />
+                        <Image alt="star" src={star} className={style.ratting_star} />
+                        <Image alt="star" src={star} className={style.ratting_star} />
+                        <Image alt="star" src={star} className={style.ratting_star} />
+                        <Image alt="star" src={star} className={style.ratting_star} />
+                        <Image alt="star" src={star} className={style.ratting_star} />
                     </Box>
                 </Box>
             </Flex>

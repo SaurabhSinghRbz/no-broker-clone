@@ -160,7 +160,7 @@ function Homepage() {
                 </Text>
                 <a
                     href="https://www.nobroker.in/prophub/home-loan/check-eligibility/?nbFr=HOME-BANNER-BUY&utm_medium=homepage&utm_source=desktopBanner"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                 >
                     <Button
                         color="#464646"
@@ -262,7 +262,7 @@ function Homepage() {
                     </Box>
                     <Box ml="120px">
                         <Text fontSize="18px" fontWeight="400">Get in touch with us to Sell or Rent Your Projects</Text>
-                        <a href="https://www.nobroker.in/prophub/builders/builders/" target="_blank" className={style.enquiryBtn}>Enquire Now</a>
+                        <a href="https://www.nobroker.in/prophub/builders/builders/" target="_blank" rel="noreferrer" className={style.enquiryBtn}>Enquire Now</a>
                         <Text fontSize="14px" p="2px 0" borderTop="1px solid #ccc">For Builder Enquiries: +91 91080 50400</Text>
                     </Box>
                 </Flex>
@@ -309,7 +309,7 @@ function Homepage() {
             <Box className={style.reviewBox}>
                 <Text align="center" fontSize="32px">Our Customers Loves us</Text>
                 <Box textAlign="center" m="30px 0">
-                    <iframe src="https://www.youtube.com/embed/0ChlgxhXVws" title="nobroekr-testimonial-video" frameborder="0" allow="encrypted-media" allowfullscreen=""></iframe>
+                    <iframe src="https://www.youtube.com/embed/0ChlgxhXVws" title="nobroekr-testimonial-video" frameBorder="0" allow="encrypted-media" allowFullScreen=""></iframe>
                 </Box>
                 <OurCoustomerReview />
                 <Text align="center" textDecoration="underline"><a href="/testimonials/" target="_blank" rel="noreferrer">More Testimonials</a></Text>
@@ -327,12 +327,12 @@ function Homepage() {
                     </Box>
                     <Flex>
                         <Text m="35px 20px 35px 0">
-                            <a href="https://www.nobroker.in/app?type=Android" target="_blank">
+                            <a href="https://www.nobroker.in/app?type=Android" target="_blank" rel="noreferrer">
                                 <Image src={playStore} alt="playStore" h="55px !important" w="220px" />
                             </a>
                         </Text>
                         <Text m="28px 0">
-                            <a href="https://apps.apple.com/nz/app/nobroker-house-for-rent/id1200507100?referrer=utm_source%3Dnobroker&utm_medium=website" target="_blank">
+                            <a href="https://apps.apple.com/nz/app/nobroker-house-for-rent/id1200507100?referrer=utm_source%3Dnobroker&utm_medium=website" target="_blank" rel="noreferrer">
                                 <Image src={appleStore} alt="appleStore" h="70px !important" w="220px" />
                             </a>
                         </Text>

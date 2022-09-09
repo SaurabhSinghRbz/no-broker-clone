@@ -4,11 +4,23 @@ import { Box, Text, Flex, Image, List, ListItem, ListIcon, CloseButton } from "@
 import { BsCheck } from "react-icons/bs"
 import signupHome from "../../Images/Login/signupHome.png"
 import { Navigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { loginSignupReq } from '../../Redux/LoginSignup/action'
 
 
 function LoginSignup() {
     const [show, setShow] = React.useState(true)
+
+    const dispatch = useDispatch()
+
+
+    React.useEffect(() => {
+        dispatch(loginSignupReq(true))
+    }, [])
+
+
     if (!show) {
+        dispatch(loginSignupReq(false))
         return <Navigate to='/' />
     }
     return show && (
@@ -18,9 +30,9 @@ function LoginSignup() {
                     <Box>
                         <CloseButton
                             alignSelf='flex-start'
-                            position='relative'
-                            right={-1}
-                            top={-1}
+                            position='absolute'
+                            right={0}
+                            top={0}
                             onClick={() => setShow(false)}
                         />
                     </Box>
