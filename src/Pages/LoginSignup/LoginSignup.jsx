@@ -26,6 +26,9 @@ function LoginSignup() {
     return show && (
         <Box className={style.loginSignupContainer}>
             <Box>
+
+            </Box>
+            <Box>
                 <Box h="100%" position="relative">
                     <Box>
                         <CloseButton

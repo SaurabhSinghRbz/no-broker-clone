@@ -12,8 +12,18 @@
     color: #2e2e2e;
 }
 
+.loginSignupContainer>:first-child {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-color: #000;
+    opacity: .5;
+}
 
-.loginSignupContainer>div {
+.loginSignupContainer>:last-child {
     max-height: 550px;
     background: #fff;
     position: absolute;
