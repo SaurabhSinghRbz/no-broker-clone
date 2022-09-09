@@ -14,6 +14,7 @@ import {
     Input,
     Switch,
     Button,
+    Stack,
 } from "@chakra-ui/react";
 import { BsCheck } from "react-icons/bs";
 import signupHome from "../../Images/Login/signupHome.png";
@@ -124,7 +125,10 @@ function LoginSignup() {
 
 
 
-
+                                    <Stack mt="20px" spacing={3}>
+                                        <Input type="text" variant='outline' placeholder='Name' className={style.nameAndEmail} />
+                                        <Input type="email" variant='outline' placeholder='Enter your email like name@gmail.com' className={style.nameAndEmail} />
+                                    </Stack>
 
 
                                     <Button className={style.loginButton}>
