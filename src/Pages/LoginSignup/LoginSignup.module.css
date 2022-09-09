@@ -1,0 +1,48 @@
+.loginSignupContainer {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    user-select: none;
+    transition: opacity .3s ease-out;
+    opacity: 1;
+    color: #2e2e2e;
+}
+
+
+.loginSignupContainer>div {
+    max-height: 550px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 670px;
+    margin: auto;
+    left: 0;
+    max-width: 670px;
+    right: 0;
+}
+
+.loginLeftBox {
+    width: 40%;
+    min-height: 125px;
+    background-color: #f8f8f8;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+
+
+/* 
+ul>li {
+    padding: 2px !important;
+    background-color: #f8f8f8 !important;
+    color: #464646;
+    border-radius: 0px !important;
+    cursor: pointer;
+} */
