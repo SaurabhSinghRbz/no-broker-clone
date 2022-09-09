@@ -1,7 +1,5 @@
 import React from 'react'
-import Slider from './slider'
 import style from '../Rent_Page/rent.module.css'
-import Slides from './newslide'
 
 import { 
     Button, 
@@ -26,11 +24,6 @@ export default function PaymentInfo() {
         <Box className={style.paymentInfo_DetailName}>
             <Heading  fontSize={18} padding="0px 10px 12px 0px" >Payment Details</Heading >
             <Text>Fill your payment details once and we will save it</Text>
-        </Box>
-        {/*  */}
-        <Box w="700px">
-          {/* <Slider/> */}
-          <Slides/>
         </Box>
         {/*  */}
         {/* <Box  display="flex" justifyContent="space-between"  className={style.paymentInfo_DetailNameTwo} >

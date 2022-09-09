@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import ToPayment from './Components/Card_Detail_Page/payment';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
 import Payment from './Components/Payment_Detail/payment';
@@ -10,7 +11,8 @@ function App() {
     <div className="App">
       <Navbar/>
       {/* <Rent/> */}
-      <Payment/>
+      {/* <Payment/> */}
+      <ToPayment/>
     </div>
   );
 }
