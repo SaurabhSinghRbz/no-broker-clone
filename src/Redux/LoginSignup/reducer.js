@@ -1,10 +1,8 @@
-import { store } from "../store"
 import { LOGINSIGNUPREQ } from "./actionTypes"
 
 const initState = {
     loginReq: false
 }
-
 
 
 export const loginReqReducer = (state = initState, action) => {

@@ -7,8 +7,10 @@ import Navbar from './Components/Navbar/Navbar';
 import Homepage from './Pages/Homepage/Homepage';
 import LoginSignup from './Pages/LoginSignup/LoginSignup';
 import { Box } from "@chakra-ui/react"
+// import { useSelector } from 'react-redux';
 
 function App() {
+  // const { loginReq } = useSelector((state) => state)
   return (
     <Box>
       <Navbar />

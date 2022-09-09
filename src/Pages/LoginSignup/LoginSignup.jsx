@@ -4,11 +4,17 @@ import { Box, Text, Flex, Image, List, ListItem, ListIcon, CloseButton } from "@
 import { BsCheck } from "react-icons/bs"
 import signupHome from "../../Images/Login/signupHome.png"
 import { Navigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { loginSignupReq } from '../../Redux/LoginSignup/action'
 
 
 function LoginSignup() {
+    const { loginReq } = useSelector((state) => state)
+    if (loginReq) {
+        document.querySelector("body").style.overflow = "hidden"
+    } else {
+        document.querySelector("body").style.overflow = "auto"
+    }
     const [show, setShow] = React.useState(true)
 
     const dispatch = useDispatch()
