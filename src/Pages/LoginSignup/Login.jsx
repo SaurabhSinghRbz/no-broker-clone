@@ -136,7 +136,7 @@ function Login() {
                                     </Button>
                                     <Text fontSize="12px !important" align="center" mt="5px">
                                         Don't have an account?{" "}
-                                        <Link to="/login"><Text color="blue !important" display="inline">Sign Up</Text></Link>
+                                        <Link to="/signup"><Text color="blue !important" display="inline">Sign Up</Text></Link>
                                     </Text>
                                 </Box>
                                 <Text className={style.loginFooter}>
