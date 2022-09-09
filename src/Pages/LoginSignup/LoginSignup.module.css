@@ -48,11 +48,98 @@
 
 
 
-/* 
-ul>li {
-    padding: 2px !important;
-    background-color: #f8f8f8 !important;
-    color: #464646;
+.loginRightBox {
+    padding: 20px;
+    margin-top: 30px;
+    width: 60%;
+    height: calc(100% - 30px);
+    position: relative;
+}
+
+
+.loginFormContainer {
+    padding: 0 20px;
+    position: relative;
+    height: calc(100% - 30px);
+    overflow-y: auto;
+}
+
+.loginFormContainer>p {
+    line-height: 23px;
+    margin-bottom: 20px;
+    color: #2e2e2e;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.mobileInput {
+    height: 40px;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+.mobileInput>* {
+    border: 0px solid !important;
     border-radius: 0px !important;
-    cursor: pointer;
-} */
+}
+
+.mobileInput>:first-child {
+    border-right: 1px solid #ddd !important;
+}
+
+.whatsappAlert {
+    background: #f8f8f8;
+    height: 40px;
+    border-radius: 0 0 4px 4px;
+    position: relative;
+    align-items: center;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-top: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.whatsappAlert>:last-child>label>span {
+    height: 16px !important;
+    width: 28px !important;
+    /* background: #009587; */
+}
+
+.whatsappAlert>:last-child>label>span>span {
+    width: 12px;
+    height: 12px;
+    top: 2px;
+}
+
+
+
+
+.loginButton {
+    width: 100%;
+    transition: top .3s ease-out;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #fd3752;
+    color: white;
+}
+
+
+
+
+.loginFooter {
+    position: absolute;
+    bottom: 30px;
+    height: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+.loginFooter>a {
+    font-weight: bold;
+    text-decoration: underline;
+}
