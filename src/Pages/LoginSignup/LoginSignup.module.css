@@ -115,14 +115,24 @@
 }
 
 
+.nameAndEmail {
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    height: 40px;
+    padding: 8px;
+    box-shadow: none;
+    word-break: normal;
+    font-size: 14px;
+}
 
 
 .loginButton {
+    margin-top: 50px;
     width: 100%;
     transition: top .3s ease-out;
     height: 40px;
     border-radius: 4px;
-    background-color: #fd3752;
+    background-color: #fd3752 !important;
     color: white;
 }
 
