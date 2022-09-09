@@ -14,7 +14,6 @@ import {
     Input,
     Switch,
     Button,
-    Stack,
 } from "@chakra-ui/react";
 import { BsCheck } from "react-icons/bs";
 import signupHome from "../../Images/Login/signupHome.png";
