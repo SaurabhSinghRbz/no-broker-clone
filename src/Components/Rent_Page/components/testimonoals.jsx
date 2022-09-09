@@ -24,7 +24,7 @@ export default function Testimonoals() {
       return (
         <Box w="100%">
             <Container textAlign="center">
-                <Heading m="0" p="40px">NoBroker Packers and Movers Reviews</Heading>
+                <Heading m="0" p="40px" fontSize={30}>NoBroker Packers and Movers Reviews</Heading>
                 <Text m="0" pb="20px" >Testimonials from our NoBroker Pay customers</Text>
             </Container>
           <Slider {...settings} className={style.testimonoals}>

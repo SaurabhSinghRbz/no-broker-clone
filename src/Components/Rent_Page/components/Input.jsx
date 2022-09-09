@@ -25,9 +25,9 @@ function Yourinput() {
 
 
  
-    if(isredirect){
-      return <Navigate to="/rent/payment"/>
-    }
+    // if(isredirect){
+    //   return <Navigate to="/rent/payment"/>
+    // }
   return (
     <div>
         <FormControl className={style.InputCon}  color="#000" >

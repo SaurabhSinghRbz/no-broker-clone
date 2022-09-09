@@ -112,10 +112,9 @@ export default function Detail() {
                     </Container>
                 </Flex>
             </Container>
-   
-            
         </VStack>
         </Container>
+       
     </div>
   )
 }

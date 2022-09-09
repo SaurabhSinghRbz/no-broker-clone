@@ -14,7 +14,7 @@ function Info() {
   return (
     <div>
         <Container className={style.InfoContainer}  >
-            <Flex className={style.InfoContainerTwo} alignItems="center" justifyContent="center">
+            <Flex className={style.InfoContainerTwo} alignItems="center" justify="center">
                 <Box  >
                     <Text pb="10px" fontSize="26px">Earn money with NoBroker Pay</Text>
                     <Text  fontSize="18px">Start paying rent using your credit card and earn miles, cashback and reward points.</Text>
@@ -26,7 +26,7 @@ function Info() {
                     <Text fontSize="20px" p="10px">You can earn up to ₹30,000* by just paying rent for a year by using your credit card.</Text>
                 </Flex>
             </Flex>
-            <Text marginTop="70px" w="1000px" fontSize="13px">*This is calculated assuming an annual rent of 4.5 Lakhs on a Club Vistara SBI Card PRIME (Premium)</Text>
+            <Text marginTop="70px" w="1000px" fontSize="13px" >*This is calculated assuming an annual rent of 4.5 Lakhs on a Club Vistara SBI Card PRIME (Premium)</Text>
         </Container>
     </div>
   )

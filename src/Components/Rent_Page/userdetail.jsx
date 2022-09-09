@@ -14,7 +14,6 @@ import Sliders from './components/slider'
 import { Routes, Route } from 'react-router-dom'
 import { Yourinput, Studentinput  } from './components/Input'
 import style from './rent.module.css'
-import Payment from './payment'
 
 export default function DetailAdd() {
 

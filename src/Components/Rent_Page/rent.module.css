@@ -27,8 +27,7 @@
 
 .inputName{
     border-radius: 3px;
-    border: 1px solid lightgrey;
-    
+    border: 1px solid rgb(146, 135, 135);    
 }
 .Sliderfirst{
     border-bottom: 1px solid lightgrey;
@@ -38,7 +37,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5px;
+    /* padding: 1; */
 }
 .link {
     height: 65px;
@@ -68,7 +67,7 @@
     justify-content: center;
     position: relative;
     top: 85px;
-    right: 360px;
+    right: 300px;
 
 }
 
@@ -87,4 +86,63 @@
     align-items: center;
     flex-direction: row;
     margin: 0px 350px 0px 350px ;
+}
+
+.box2{
+    border: 1px solid #000;
+}
+
+
+
+
+
+
+/* payment_Detail Folder ---> paumentInfo.jsx */
+
+.paymentDetailPage{
+    /* border: 1px solid; */
+}
+.paymentDetailPage{
+    /* border: 1px solid #000; */
+}
+.paymentInfoContainerPage > *{
+    padding: 15px;
+    /* border: 1px solid; */
+}
+.paymentInfoContainerPage{
+    /* border: 5px solid #000; */
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px 0 40px;
+    /* align-items: center; */
+    width: 100%;
+    font-size: 14px;
+    /* border-bottom: 1px solid lightgray; */
+
+}
+.paymentContainerPage{
+    /* border: 5px solid #000; */
+}
+
+
+.paymentInfo_DetailName{
+    height: 64px;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0px 0px 12px 0px;
+}
+
+.paymentInfo_DetailNameTwo{
+    height: 65px;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0px 15px 20px 0px;
+}
+.paymentInfo_DetailNameThree{
+    padding: 15px 15px 15px 0px;
+
+}
+.paymentInfo_DetailNameFour{
+    padding: 15px 0px 15px 0px;
+    /* border: 1px solid; */
 }
