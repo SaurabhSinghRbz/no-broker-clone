@@ -1,19 +1,31 @@
+
 import React from 'react';
+
+
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+
 import './App.css';
-import ToPayment from './Components/Card_Detail_Page/payment';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
-import Payment from './Components/Payment_Detail/payment';
-import Rent from './Components/Rent_Page/rent';
+
+import Homepage from './Pages/Homepage/Homepage';
+import LoginSignup from './Pages/LoginSignup/LoginSignup';
+import { Box } from "@chakra-ui/react"
+// import { useSelector } from 'react-redux';
+
 
 function App() {
+  // const { loginReq } = useSelector((state) => state)
   return (
-    <div className="App">
-      <Navbar/>
-      {/* <Rent/> */}
-      {/* <Payment/> */}
-      <ToPayment/>
-    </div>
+    <Box>
+      <Navbar />
+      <Homepage />
+      <Footer />
+      <Routes>
+        <Route path="/login-signup" element={<LoginSignup />} />
+      </Routes>
+    </Box>
   );
 }
 

@@ -1,13 +1,14 @@
 .footerOptions {
     justify-content: space-between;
-    padding: 5px 20px;
+    padding: 0px 25px;
     border-top: 1px solid grey;
+
     background-color: hsla(0, 0%, 92.9%, .4);
     overflow: auto;
 }
 
 .footerOptions>div {
-    padding: 15px 10px;
+    padding: 12px 15px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
@@ -15,8 +16,10 @@
 
 .footerSubOptions {
     justify-content: space-between;
-    padding: 5px 20px;
+    padding: 5px 20px 30px 25px;
     overflow: auto;
+    margin-bottom: 30px;
+    border-bottom: 1px solid grey;
 }
 
 
@@ -26,9 +29,80 @@
     padding: 15px 10px 0px 10px;
     cursor: pointer;
     font-weight: 600;
+
 }
 
 .footerSubOptions p {
-    cursor: pointer;
     padding: 5px 10px;
+    color: grey;
+    font-weight: 500;
+}
+
+.footerSubOptions p:hover {
+    cursor: pointer;
+    color: black;
+}
+
+ul>li {
+    padding: 2px 8px;
+    background-color: #e8e8e8;
+    color: #464646;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.findNow {
+    margin: 20px 0;
+    background-color: #ededed;
+    justify-content: space-around;
+    padding: 30px 0;
+    border-top: 1px solid rgba(70, 70, 70, .239216);
+    border-bottom: 1px solid rgba(70, 70, 70, .239216);
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.findNow>div {
+    text-align: center;
+}
+
+.findNow>div>:last-child {
+    padding: 3px 20px;
+    border-radius: 4px;
+    background-color: #333333;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+
+.findNow>div>:last-child:hover {
+    cursor: pointer;
+}
+
+.aboutUs>p {
+    margin: 0 20px;
+    font-size: 18px;
+    color: #464646;
+}
+
+.aboutUs>p:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.socialLinks>a {
+    background-color: #e8e8e8;
+    border-radius: 100%;
+    padding: 7px 9px;
+    margin: 0 20px;
+}
+
+.socialLinks svg {
+    height: 20px;
+    width: 20px;
 }

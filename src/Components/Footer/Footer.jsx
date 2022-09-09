@@ -4,8 +4,7 @@ import FooterOptions from './FooterOptions'
 import "./Footer.module.css"
 function Footer() {
     return (
-        <Box>
-            <div>Footer</div>
+        <Box >
             <FooterOptions />
         </Box>
     )
