@@ -18,7 +18,7 @@ function Navbar() {
                 <Link to="/">
                     <Flex className={style.payRent}><Image src={myBooking} /> My Bookings</Flex>
                 </Link>
-                <Link to="/">
+                <Link to="/payrent">
                     <Flex className={style.payRent}><Image src={payRent} /> Pay Rent</Flex>
                 </Link>
                 <Link to="/">
