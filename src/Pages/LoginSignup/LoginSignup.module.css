@@ -116,13 +116,13 @@
 
 
 .nameAndEmail {
-    border-radius: 2px;
-    border: 1px solid #ccc;
-    height: 40px;
-    padding: 8px;
+    border-radius: 2px !important;
+    border: 1px solid #ccc !important;
+    height: 40px !important;
+    padding: 8px !important;
     box-shadow: none;
     word-break: normal;
-    font-size: 14px;
+    font-size: 14px !important;
 }
 
 

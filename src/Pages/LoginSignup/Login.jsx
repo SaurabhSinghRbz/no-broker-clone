@@ -18,12 +18,12 @@ import {
 } from "@chakra-ui/react";
 import { BsCheck } from "react-icons/bs";
 import signupHome from "../../Images/Login/signupHome.png";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { loginSignupReq } from "../../Redux/LoginSignup/action";
 import whatsappIcon from "../../Images/Login/whatsappIcon.png";
 
-function LoginSignup() {
+function Login() {
     const { loginReq } = useSelector((state) => state);
     if (loginReq) {
         document.querySelector("body").style.overflow = "hidden";
@@ -71,7 +71,7 @@ function LoginSignup() {
                                 </Box>
                                 <Box mt="10px" maxW="80%" w="80%">
                                     <Text fontWeight="600" fontSize="18px" mb="8px">
-                                        Login/Sign up
+                                        Login
                                     </Text>
                                     <List spacing={3}>
                                         <ListItem>
@@ -125,15 +125,19 @@ function LoginSignup() {
 
 
 
-                                    <Stack mt="20px" spacing={3}>
+                                    {/* <Stack mt="20px" spacing={3}>
                                         <Input type="text" variant='outline' placeholder='Name' className={style.nameAndEmail} />
                                         <Input type="email" variant='outline' placeholder='Enter your email like name@gmail.com' className={style.nameAndEmail} />
-                                    </Stack>
+                                    </Stack> */}
 
 
                                     <Button className={style.loginButton}>
                                         Continue
                                     </Button>
+                                    <Text fontSize="12px !important" align="center" mt="5px">
+                                        Don't have an account?{" "}
+                                        <Link to="/signup"><Text color="blue !important" display="inline">Sign Up</Text></Link>
+                                    </Text>
                                 </Box>
                                 <Text className={style.loginFooter}>
                                     By continuing, you agree to our{" "}
@@ -153,4 +157,4 @@ function LoginSignup() {
     );
 }
 
-export default LoginSignup;
+export default Login;
