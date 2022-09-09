@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box !important;
   user-select: none;
   margin: 0;
   padding: 0;

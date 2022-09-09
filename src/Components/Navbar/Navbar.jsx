@@ -25,8 +25,8 @@ function Navbar() {
                     <Flex className={style.payRent} bgColor="#009587" color="white" borderRadius="4px">For Property owners</Flex>
                 </Link>
                 <Flex alignItems="center">
-                    <Link to="/"><Text className={style.loginSingUp} >Sign Up</Text></Link>
-                    <Link to="/"><Text className={style.loginSingUp} >Log In</Text></Link>
+                    <Link to="/login-signup"><Text className={style.loginSingUp} >Sign Up</Text></Link>
+                    <Link to="/login-signup"><Text className={style.loginSingUp} >Log In</Text></Link>
                 </Flex>
                 <Box className={style.menuBox}>
                     <Menu >

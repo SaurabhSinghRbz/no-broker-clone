@@ -6,7 +6,7 @@ import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import ReviewCard from './ReviewCard';
-import { Box, Text } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 
 
 const coustomersData = [
@@ -102,9 +102,9 @@ function OurCoustomerReview() {
                 modules={[Navigation]}
                 className="mySwiper swiper-container"
             >
-                {coustomersData.map((data) => <SwiperSlide
+                {coustomersData.map((data, idx) => <SwiperSlide
                     className='swiper-slide'>
-                    <ReviewCard data={data}></ReviewCard>
+                    <ReviewCard data={data} ></ReviewCard>
                 </SwiperSlide>)}
             </Swiper>
         </Box >
