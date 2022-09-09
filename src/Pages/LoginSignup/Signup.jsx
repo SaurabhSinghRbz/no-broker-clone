@@ -23,16 +23,52 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginSignupReq } from "../../Redux/LoginSignup/action";
 import whatsappIcon from "../../Images/Login/whatsappIcon.png";
 
+
+
+
+const initialFromData = {
+    name: "",
+    phone: "",
+    email: ""
+};
+
+
+
 function Signup() {
+    const [formData, setFormData] = React.useState(initialFromData);
+    const [show, setShow] = React.useState(true);
+
+    const dispatch = useDispatch();
+
+
+    const { name, phone, email } = formData;
+
+
+
+
+    const handleChange = (e) => {
+        let { name, value } = e.target;
+        setFormData((prevData) => ({ ...prevData, [name]: value }));
+    };
+
+    const handleSubmit = (formData) => {
+        console.log(formData)
+        fetch("http://localhost:8080/registerdUser", {
+            method: "POST",
+            body: JSON.stringify(formData),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(() => setShow(false))
+    };
+
     const { loginReq } = useSelector((state) => state);
     if (loginReq) {
         document.querySelector("body").style.overflow = "hidden";
     } else {
         document.querySelector("body").style.overflow = "auto";
     }
-    const [show, setShow] = React.useState(true);
 
-    const dispatch = useDispatch();
 
     React.useEffect(() => {
         dispatch(loginSignupReq(true));
@@ -42,6 +78,9 @@ function Signup() {
         dispatch(loginSignupReq(false));
         return <Navigate to="/" />;
     }
+
+
+
     return (
         show && (
             <Box className={style.loginSignupContainer}>
@@ -101,8 +140,12 @@ function Signup() {
                                                 />
                                                 <Input
                                                     type="tel"
+                                                    name="phone"
+                                                    value={phone}
+                                                    onChange={handleChange}
                                                     placeholder="Enter Mobile Number"
                                                     fontSize="14px"
+                                                    maxlength="10"
                                                 />
                                             </InputGroup>
                                         </Box>
@@ -123,20 +166,37 @@ function Signup() {
                                         </Flex>
                                     </Box>
 
-
-
                                     <Stack mt="20px" spacing={3}>
-                                        <Input type="text" variant='outline' placeholder='Name' className={style.nameAndEmail} />
-                                        <Input type="email" variant='outline' placeholder='Enter your email like name@gmail.com' className={style.nameAndEmail} />
+                                        <Input
+                                            type="text"
+                                            variant="outline"
+                                            placeholder="Name"
+                                            name="name"
+                                            value={name}
+                                            onChange={handleChange}
+                                            className={style.nameAndEmail}
+                                        />
+                                        <Input
+                                            type="email"
+                                            variant="outline"
+                                            placeholder="Enter your email like name@gmail.com"
+                                            name="email"
+                                            value={email}
+                                            onChange={handleChange}
+                                            className={style.nameAndEmail}
+                                        />
                                     </Stack>
 
-
-                                    <Button className={style.loginButton}>
+                                    <Button className={style.loginButton} onClick={() => handleSubmit(formData)}>
                                         Continue
                                     </Button>
                                     <Text fontSize="12px !important" align="center" mt="5px">
                                         Already have an account?{" "}
-                                        <Link to="/login"><Text color="blue !important" display="inline">Sign In</Text></Link>
+                                        <Link to="/login">
+                                            <Text color="blue !important" display="inline">
+                                                Sign In
+                                            </Text>
+                                        </Link>
                                     </Text>
                                 </Box>
                                 <Text className={style.loginFooter}>
