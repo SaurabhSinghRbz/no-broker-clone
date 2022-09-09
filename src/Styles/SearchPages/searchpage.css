@@ -1,0 +1,54 @@
+.price-div{
+    display: grid;
+    border-top: 1px solid gainsboro;
+    grid-template-columns: repeat(3,1fr);
+    border-bottom: 1px solid gainsboro;
+
+}
+.price-span{
+    padding: 1%;
+}
+.var-price-tag{
+    font-weight: 600;
+}
+.con-price-tag{
+    font-size: 70%;
+    font-weight: 400;
+}
+.data-card-image{
+    width: 110%;
+    height: 100%;
+    padding-right: 1rem;
+}
+.card-detail-div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.card-detail-div>div{
+    border: 0.1px solid gainsboro;
+    padding: 1%;
+}
+.nearby{
+    background-color: rgb(235, 233, 233);
+    margin-left: 0.5%;
+    padding: 0.3%;
+}
+.search-page-head-div{
+    background-color: rgb(250, 247, 247);
+    display: grid;
+    grid-template-columns: 30% 50% 10%;
+}
+.search-page-card-head{
+    border-top: 0.1px solid gainsboro;
+    transition: 0.5s;
+    box-shadow: none;
+    width: 100%;
+    margin-top: 1%;
+}
+.search-page-card-head:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+}
+.card-house-name-heading:hover{
+    transition: 0.2s;
+    color: red;
+}
