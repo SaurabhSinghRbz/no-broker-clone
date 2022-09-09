@@ -23,18 +23,19 @@ import { loginSignupReq } from "../../Redux/LoginSignup/action";
 import whatsappIcon from "../../Images/Login/whatsappIcon.png";
 
 function Login() {
-    const { loginReq } = useSelector((state) => state);
-    if (loginReq) {
-        document.querySelector("body").style.overflow = "hidden";
-    } else {
-        document.querySelector("body").style.overflow = "auto";
-    }
+    // const { loginReq } = useSelector((state) => state);
+    // if (loginReq) {
+    //     document.querySelector("body").style.overflow = "hidden";
+    // } else {
+    //     document.querySelector("body").style.overflow = "auto";
+    // }
     const [show, setShow] = React.useState(true);
 
     const dispatch = useDispatch();
 
     React.useEffect(() => {
         dispatch(loginSignupReq(true));
+
     }, []);
 
     if (!show) {
@@ -121,14 +122,6 @@ function Login() {
                                             </Box>
                                         </Flex>
                                     </Box>
-
-
-
-                                    {/* <Stack mt="20px" spacing={3}>
-                                        <Input type="text" variant='outline' placeholder='Name' className={style.nameAndEmail} />
-                                        <Input type="email" variant='outline' placeholder='Enter your email like name@gmail.com' className={style.nameAndEmail} />
-                                    </Stack> */}
-
 
                                     <Button className={style.loginButton}>
                                         Continue

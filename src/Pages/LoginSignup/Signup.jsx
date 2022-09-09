@@ -20,7 +20,7 @@ import { BsCheck } from "react-icons/bs";
 import signupHome from "../../Images/Login/signupHome.png";
 import { Link, Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { loginSignupReq } from "../../Redux/LoginSignup/action";
+import { addAUser, isUserLogged, loginSignupReq } from "../../Redux/LoginSignup/action";
 import whatsappIcon from "../../Images/Login/whatsappIcon.png";
 
 
@@ -52,7 +52,8 @@ function Signup() {
     };
 
     const handleSubmit = (formData) => {
-        console.log(formData)
+        dispatch(addAUser(formData))
+        dispatch(isUserLogged(true))
         fetch("http://localhost:8080/registerdUser", {
             method: "POST",
             body: JSON.stringify(formData),
@@ -62,12 +63,12 @@ function Signup() {
         }).then(() => setShow(false))
     };
 
-    const { loginReq } = useSelector((state) => state);
-    if (loginReq) {
-        document.querySelector("body").style.overflow = "hidden";
-    } else {
-        document.querySelector("body").style.overflow = "auto";
-    }
+    // const loginReq = useSelector((state) => state.loginReq);
+    // if (loginReq) {
+    //     document.querySelector("body").style.overflow = "hidden";
+    // } else {
+    //     document.querySelector("body").style.overflow = "auto";
+    // }
 
 
     React.useEffect(() => {

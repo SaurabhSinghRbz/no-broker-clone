@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-import RefreshOutlinedIcon from '@mui/icons-material/RefreshOutlined';
+// import RefreshOutlinedIcon from '@mui/icons-material/RefreshOutlined';
 import '../../Styles/SearchPages/filter.css'
 import { Button } from '@mui/material';
 
@@ -27,18 +27,18 @@ export const FilterForSearchPage = (props) => {
         filterType === 'filter' ?
           <div>
             <div style={{ display: 'flex', marginLeft: '80%' }}>
-              <div><button style={{ display: 'flex', border: 'none', backgroundColor: 'white' }} onClick={()=>props.setType('')}><span><RefreshOutlinedIcon style={{ width: '1rem' }} /></span><span style={{ marginTop: '0.3rem' }}>refresh</span></button></div>
+              <div><button style={{ display: 'flex', border: 'none', backgroundColor: 'white' }} onClick={() => props.setType('')}><span></span><span style={{ marginTop: '0.3rem' }}>refresh</span></button></div>
             </div>
             <div style={{ marginBottom: '0.5rem' }}>
               Apartment Type
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gridGap: '0.4rem' }}>
-              <button className='apartmentType' onClick={()=>props.setType('1 RK')}>1RK</button>
-              <button className='apartmentType' onClick={()=>props.setType('1BHK')}>1BHK</button>
-              <button className='apartmentType' onClick={()=>props.setType('2BHK')}>2BHK</button>
-              <button className='apartmentType' onClick={()=>props.setType('3 BHK')}>3BHK</button>
-              <button className='apartmentType' onClick={()=>props.setType('4 BHK')}>4BHK</button>
-              <button className='apartmentType' onClick={()=>props.setType('4+ RK')}>4+BHK</button>
+              <button className='apartmentType' onClick={() => props.setType('1 RK')}>1RK</button>
+              <button className='apartmentType' onClick={() => props.setType('1BHK')}>1BHK</button>
+              <button className='apartmentType' onClick={() => props.setType('2BHK')}>2BHK</button>
+              <button className='apartmentType' onClick={() => props.setType('3 BHK')}>3BHK</button>
+              <button className='apartmentType' onClick={() => props.setType('4 BHK')}>4BHK</button>
+              <button className='apartmentType' onClick={() => props.setType('4+ RK')}>4+BHK</button>
             </div>
             <br />
             <div style={{ marginBottom: '0.5rem' }}>Price Range: ₹0 to ₹{value}</div>
@@ -105,7 +105,7 @@ export const FilterForSearchPage = (props) => {
 
           <div>
             <div style={{ display: 'flex', marginLeft: '80%' }}>
-              <div><button style={{ display: 'flex', border: 'none', backgroundColor: 'white' }}><span><RefreshOutlinedIcon style={{ width: '1rem' }} /></span><span style={{ marginTop: '0.3rem' }}>refresh</span></button></div>
+              <div><button style={{ display: 'flex', border: 'none', backgroundColor: 'white' }}><span></span><span style={{ marginTop: '0.3rem' }}>refresh</span></button></div>
             </div>
             <div style={{ marginBottom: '0.5rem' }}>Gated Societies</div>
             <div>

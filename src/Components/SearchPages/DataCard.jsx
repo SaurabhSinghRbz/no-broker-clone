@@ -55,12 +55,12 @@ export const DataCard = (props) => {
                 <div style={{ padding: '2%', display: 'grid', gridTemplateColumns: '35% 65%', height: '11rem' }}>
                     <div className='data-card-image'>
                         <Carousel>
-                            <img src={images[0]} alt="" style={{height:'9rem',width:'15rem'}}/>
-                            <img src={images[1]} alt="" style={{height:'9rem',width:'15rem'}}/>
-                            <img src={images[2]} alt="" style={{height:'9rem',width:'15rem'}}/>
-                            <img src={images[3]} alt="" style={{height:'9rem',width:'15rem'}}/>
-                            <img src={images[4]} alt="" style={{height:'9rem',width:'15rem'}}/>
-                            <img src={images[5]} alt="" style={{height:'9rem',width:'15rem'}}/>
+                            <img src={images[0]} alt="" style={{ height: '9rem', width: '15rem' }} />
+                            <img src={images[1]} alt="" style={{ height: '9rem', width: '15rem' }} />
+                            <img src={images[2]} alt="" style={{ height: '9rem', width: '15rem' }} />
+                            <img src={images[3]} alt="" style={{ height: '9rem', width: '15rem' }} />
+                            <img src={images[4]} alt="" style={{ height: '9rem', width: '15rem' }} />
+                            <img src={images[5]} alt="" style={{ height: '9rem', width: '15rem' }} />
                         </Carousel>
                     </div>
                     <div style={{ paddingLeft: '10%' }}>

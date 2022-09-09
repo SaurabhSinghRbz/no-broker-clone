@@ -65,6 +65,8 @@
     cursor: pointer;
 }
 
+
+
 .menuOptionBox {
     width: 250px !important;
     max-height: 85vh !important;
@@ -72,5 +74,33 @@
     right: -70px !important;
     border-radius: 0px !important;
     overflow: auto;
+    border: 1px solid #ddd !important;
+}
+
+.userDetailBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userDetailBox a {
+    width: 100%;
+    padding: 8px 0;
+    margin: -2px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #ebebeb;
+    font-weight: 400;
+    display: block;
+    color: #777;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.userDetailOptionBox {
+    width: 200px !important;
+    position: absolute !important;
+    right: -70px !important;
+    border-radius: 0px !important;
     border: 1px solid #ddd !important;
 }
