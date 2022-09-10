@@ -24,7 +24,6 @@ import { Route, Routes, Link } from 'react-router-dom';
 
 
 export default function Rent() {
-  console.log(window.location.href, "location")
   return (
     <div>
       <Flex className={style.ContainerOne} bg="linear-gradient(#283593,#3f51b5)" justifyContent="space-between" p="20px">

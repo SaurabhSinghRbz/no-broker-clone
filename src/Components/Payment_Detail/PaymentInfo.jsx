@@ -2,6 +2,7 @@ import React from 'react'
 import Slider from './slider'
 import style from '../Rent_Page/rent.module.css'
 import Slides from './newslide'
+import { Link } from "react-router-dom"
 
 import { 
     Button, 
@@ -16,8 +17,8 @@ import {
     Box,
     Checkbox,
     Select,
-  
     } from "@chakra-ui/react"
+
 
 export default function PaymentInfo() {
   return (
@@ -96,10 +97,12 @@ export default function PaymentInfo() {
             <Input w="400px"   type="file" h="30px" border="none" className={style.inputName} placeholder='' />
         </Box>     */}
       </Box>
-      <Box display="flex" justifyContent="space-between" p="35px" borderTop="1px solid lightGray">
+      {/* <Box display="flex" justifyContent="space-between" p="35px" borderTop="1px solid lightGray">
         <FormLabel>Fill your payment details once to save it so you don’t have to enter it again</FormLabel>
-        <Button bg="#e3324a" p="22px" color="white"> Save Payment Detail</Button>
-      </Box>
+        <Link to="/payrent/payment">
+        <Button  bg="#e3324a" p="22px" color="white"> Save Payment Detail</Button>
+        </Link>
+      </Box> */}
     </Box>
   )
 }

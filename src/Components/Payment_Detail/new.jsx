@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import style from '../Rent_Page/rent.module.css'
 import { 
     Button, 
@@ -15,17 +16,45 @@ import {
     Select,
 } from '@chakra-ui/react'
 function Home() {
+  const [name, setName] = React.useState("")
+  const [number, setNumber]= React.useState("")
+  const [account, setAccount] = React.useState("")
+  const [code, setCode] = React.useState("")
+  const [address, setAddress] = React.useState("")
+  const [type, setType] = React.useState("")
+  const [amount, setAmount] = React.useState("")
+  const [file, setFile] = React.useState("")
+
+  const handleLogin = () => {
+    const payload = { name, number,account,code,address,type,amount,file};
+    fetch(`http://localhost:3002/posts`, {
+    method: "POST",
+    body: JSON.stringify(payload),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.token) {
+        //  navigate("/");
+        }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
   return (
     <div>
     <Box>
         <Box  display="flex" justifyContent="space-between"  className={style.paymentInfo_DetailNameTwo} >
           <Box>
             <FormLabel fontSize={14} >Landlord Name(As per bank records)</FormLabel>
-            <Input borderBottom="1px solid lightGray" w="340px" h="40px" className={style.inputName} placeholder='Enter Name'/>
+            <Input value={name}  onChange={(e) => setName(e.target.value)} borderBottom="1px solid lightGray" w="340px" h="40px" className={style.inputName} placeholder='Enter Name'/>
           </Box>
           <Box>
             <FormLabel fontSize={14}> Contact Number (optional)(As per bank records)</FormLabel>
-            <Input borderBottom="1px solid lightGray" w="340px" h="40px" className={style.inputName} type='tel' placeholder='phone number' />
+            <Input value={number}  onChange={(e) => setNumber(e.target.value)} borderBottom="1px solid lightGray" w="340px" h="40px" className={style.inputName} type='tel' placeholder='phone number' />
           </Box>
         </Box>
         {/*  */}
@@ -40,7 +69,7 @@ function Home() {
         <Box  display="flex" justifyContent="space-between"  className={style.paymentInfo_DetailNameTwo} >
           <Box>
             <FormLabel fontSize={14} >Bank Account Number</FormLabel>
-            <Input borderBottom="1px solid lightGray" w="340px" h="40px" className={style.inputName} placeholder='Enter banks account number' />
+            <Input value={account}  onChange={(e) => setAccount(e.target.value)} borderBottom="1px solid lightGray" w="340px" h="40px" className={style.inputName} placeholder='Enter banks account number' />
           </Box>
           <Box>
             <FormLabel fontSize={14}>Confirm Account Number</FormLabel>
@@ -51,11 +80,11 @@ function Home() {
         <Box  display="flex" justifyContent="space-between"  className={style.paymentInfo_DetailNameFour} >
           <Box>
             <FormLabel fontSize={14} >IFSC Code</FormLabel>
-            <Input borderBottom="1px solid lightGray" w="340px" h="40px" className={style.inputName} placeholder='e.g. KKBK0000430' />
+            <Input value={code}  onChange={(e) => setCode(e.target.value)} borderBottom="1px solid lightGray" w="340px" h="40px" className={style.inputName} placeholder='e.g. KKBK0000430' />
           </Box>
           <Box>
             <FormLabel fontSize={14}>BHK Type</FormLabel>
-            <Select borderBottom="1px solid lightGray" placeholder='Select option'>
+            <Select value={type}  onChange={(e) => setType(e.target.value)} borderBottom="1px solid lightGray" placeholder='Select option'>
               <option value='option1'>1 RK</option>
               <option value='option2'>1 BHK</option>
               <option value='option3'>2 BHK</option>
@@ -68,19 +97,25 @@ function Home() {
         <Box  display="flex" justifyContent="space-between"  className={style.paymentInfo_DetailNameFour} >
           <Box>
             <FormLabel fontSize={14} >Property Address</FormLabel>
-            <Input borderBottom="1px solid lightGray"  w="340px" h="40px" className={style.inputName} placeholder='Enter address' />
+            <Input value={address}  onChange={(e) => setAddress(e.target.value)} borderBottom="1px solid lightGray"  w="340px" h="40px" className={style.inputName} placeholder='Enter address' />
           </Box>
           <Box>
             <FormLabel fontSize={14}>Rent Amount</FormLabel>
-            <Input w="340px" borderBottom="1px solid lightGray" h="40px" className={style.inputName} type='tel' placeholder="Enter amount" />
+            <Input value={amount}  onChange={(e) => setAmount(e.target.value)} w="340px" borderBottom="1px solid lightGray" h="40px" className={style.inputName} type='tel' placeholder="Enter amount" />
           </Box>
         </Box>
         {/*  */}
         <Box  className={style.paymentInfo_DetailNameFour} >
             <FormLabel fontSize={14} >Upload Rental Agreement (optional)</FormLabel>
-            <Input w="400px"   type="file" h="30px" border="none" className={style.inputName} placeholder='' />
+            <Input value={file}  onChange={(e) => setFile(e.target.value)} w="400px"   type="file" h="30px" border="none" className={style.inputName} placeholder='' />
         </Box> 
-    </Box>   
+    </Box> 
+    <Box display="flex" justifyContent="space-between" p="35px" borderTop="1px solid lightGray">
+        <FormLabel>Fill your payment details once to save it so you don’t have to enter it again</FormLabel>
+        <Link to="/payrent/payment">
+        <Button  onClick={handleLogin}    bg="#e3324a" p="22px" color="white"> Save Payment Detail</Button>
+        </Link>
+      </Box>  
     </div>
   )
 }
@@ -89,6 +124,7 @@ function Home() {
 
 function School() {
   return (
+    <div>
     <Box>
     <Box  display="flex" justifyContent="space-between"  className={style.paymentInfo_DetailNameFour} >
      <Box>
@@ -141,6 +177,13 @@ function School() {
        <Input w="400px"   type="file" h="30px" border="none" className={style.inputName} placeholder='' />
    </Box> 
    </Box>
+   <Box display="flex" justifyContent="space-between" p="35px" borderTop="1px solid lightGray">
+        <FormLabel>Fill your payment details once to save it so you don’t have to enter it again</FormLabel>
+        <Link to="/payrent/payment">
+        <Button  bg="#e3324a" p="22px" color="white"> Save Payment Detail</Button>
+        </Link>
+      </Box>
+   </div>
     )
 }
 
@@ -221,6 +264,12 @@ function Society() {
                 </Box> 
             </Box>
       </Box>   
+      <Box display="flex" justifyContent="space-between" p="35px" borderTop="1px solid lightGray">
+        <FormLabel>Fill your payment details once to save it so you don’t have to enter it again</FormLabel>
+        <Link to="/payrent/payment">
+        <Button  bg="#e3324a" p="22px" color="white"> Save Payment Detail</Button>
+        </Link>
+      </Box>
       </div>
     )
   }
@@ -293,7 +342,13 @@ function Society() {
             <FormLabel fontSize={14} >Upload Rental Agreement (optional)</FormLabel>
             <Input w="400px"   type="file" h="30px" border="none" className={style.inputName} placeholder='' />
         </Box> 
-    </Box>   
+    </Box>  
+    <Box display="flex" justifyContent="space-between" p="35px" borderTop="1px solid lightGray">
+        <FormLabel>Fill your payment details once to save it so you don’t have to enter it again</FormLabel>
+        <Link to="/payrent/payment">
+        <Button  bg="#e3324a" p="22px" color="white"> Save Payment Detail</Button>
+        </Link>
+      </Box> 
     </div>
   )
 }
@@ -360,7 +415,13 @@ function Society() {
             <FormLabel fontSize={14} >Tenant's PAN</FormLabel>
             <Input w="400px"   type="text" h="30px" border="none" className={style.inputName} placeholder='Enter tenant PAN' />
         </Box> 
-    </Box>   
+    </Box> 
+    <Box display="flex" justifyContent="space-between" p="35px" borderTop="1px solid lightGray">
+        <FormLabel>Fill your payment details once to save it so you don’t have to enter it again</FormLabel>
+        <Link to="/payrent/payment">
+        <Button  bg="#e3324a" p="22px" color="white"> Save Payment Detail</Button>
+        </Link>
+      </Box>  
     </div>
   )
 }
@@ -426,7 +487,13 @@ function Propertys() {
             <FormLabel fontSize={14} >Tenant's PAN (optional)</FormLabel>
             <Input w="400px"   type="text" h="30px" border="none" className={style.inputName} placeholder='Enter tenant PAN' />
         </Box> 
-    </Box>   
+    </Box>  
+    <Box display="flex" justifyContent="space-between" p="35px" borderTop="1px solid lightGray">
+        <FormLabel>Fill your payment details once to save it so you don’t have to enter it again</FormLabel>
+        <Link to="/payrent/payment">
+        <Button  bg="#e3324a" p="22px" color="white"> Save Payment Detail</Button>
+        </Link>
+      </Box> 
     </div>
   )
 }

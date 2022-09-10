@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
     Input ,
     FormControl,
@@ -61,8 +62,9 @@ function Yourinput() {
                 <FormErrorMessage></FormErrorMessage>
                 )}
             </FormControl>
-         <Button  colorScheme='red' w="100%" mt="20px" onClick={()=>setisredirect(true)} >   Get Started</Button>
-              
+            <Link to="/payrent/paymentdetail">
+                <Button  colorScheme='red' w="100%" mt="20px" onClick={()=>setisredirect(true)} >   Get Started</Button>
+            </Link>
                
     </div>
   )

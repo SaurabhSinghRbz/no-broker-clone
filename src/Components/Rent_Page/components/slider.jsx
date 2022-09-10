@@ -2,16 +2,22 @@ import React, { Component } from "react";
 import styled from "../rent.module.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom"
+import { Yourinput, Studentinput  } from './Input'
 import {
   Image,
   Text,
   Button,
   Container,
   Box,
+  TabList,
+  Tab,
+  Tabs,
+  TabPanel,
+  TabPanels,
 } from '@chakra-ui/react'
 
 
-export default function Sliders() {
+export default function Sliders()  {
   const [selectedBg, setSelectedBg] = React.useState(1);
   const settings = {
     className: "center",
@@ -23,59 +29,85 @@ export default function Sliders() {
   };
 
   return (
-    <div>
-      <Box p="20px" >
-        <Slider {...settings} className={styled.Sliderfirst}  >
-
-          <Link to="/payrent/houserent" className={styled.link}>
+  <div>
+  <Box p="20px" >
+      {/* <Slider {...settings} className={styled.Sliderfirst}  > */}
+    <Tabs>
+      <TabList>
+        <Tab to="/rent/houserent"  className={styled.link}>
+          <Box display="flex">
+            <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/home.svg"/>
+          </Box>
+            <Text fontSize="13px">House Rent</Text>
+             
+        </Tab>
+        
+        <Tab  className={styled.link} >
+          <Box display="flex">
+              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/school.svg"/>
+          </Box>      
+            <Text fontSize="13px" >School/College Fees</Text>
+         
+        </Tab>
+        <Tab  className={styled.link}>
             <Box display="flex">
-              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/home.svg" />
+              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/tuition.svg"/>
             </Box>
-            <Text fontSize="13px" onClick={() => setSelectedBg(1)} style={selectedBg === 1 ? { borderBottom: "3px solid blue" } : {}}>House Rent</Text>
-
-          </Link>
-
-          <Link to="/payrent/schoolfees" className={styled.link} >
+            <Text fontSize="13px">Tuition Fess</Text>
+        </Tab>
+        <Tab  className={styled.link}>
             <Box display="flex">
-              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/school.svg" />
+              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/maintenance.svg"/>
             </Box>
-            <Text fontSize="13px" onClick={() => setSelectedBg(2)} style={selectedBg === 2 ? { borderBottom: "3px solid blue" } : {}}>School/College Fees</Text>
-
-          </Link>
-          <Link to="/payrent/tuitionfees" className={styled.link}>
+            <Text fontSize="13px" >Society Maintenance</Text>
+        </Tab>
+        <Tab  className={styled.link}>
             <Box display="flex">
-              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/tuition.svg" />
+              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/office.svg"/>
             </Box>
-            <Text fontSize="13px" onClick={() => setSelectedBg(3)} style={selectedBg === 3 ? { borderBottom: "3px solid blue" } : {}}>Tuition Fess</Text>
-          </Link>
-          <Link to="/payrent/societymaintenance" className={styled.link}>
+            <Text fontSize="13px" >Office/Shop Rent</Text>
+        </Tab>
+        {/* <Tab  className={styled.link}>
             <Box display="flex">
-              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/maintenance.svg" />
+              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/token.svg"/>
             </Box>
-            <Text fontSize="13px" onClick={() => setSelectedBg(4)} style={selectedBg === 4 ? { borderBottom: "3px solid blue" } : {}}>Society Maintenance</Text>
-          </Link>
-          <Link to="/payrent/shoprent" className={styled.link}>
-            <Box display="flex">
-              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/office.svg" />
-            </Box>
-            <Text fontSize="13px" onClick={() => setSelectedBg(7)} style={selectedBg === 7 ? { borderBottom: "3px solid blue" } : {}}>Office/Shop Rent</Text>
-          </Link>
-          <Link to="/payrent/property" className={styled.link}>
-            <Box display="flex">
-              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/token.svg" />
-            </Box>
-            <Text fontSize="13px" onClick={() => setSelectedBg(5)} style={selectedBg === 5 ? { borderBottom: "3px solid blue" } : {}}>Property Token</Text>
-          </Link>
-          <Link to="/payrent/deposite" className={styled.link} >
+            <Text fontSize="13px" >Property Token</Text>
+        </Tab>
+        <Tab  className={styled.link} >
             <Box display="flex" >
-              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/deposit.svg" />
+              <Image className={styled.sliderImg} src="https://assets.nobroker.in/nb-new/public/RentoPay/deposit.svg"/>
             </Box>
-            <Text fontSize="13px" onClick={() => setSelectedBg(6)} style={selectedBg === 6 ? { borderBottom: "3px solid blue" } : {}}>Property Deposit</Text>
-          </Link>
-        </Slider>
-      </Box>
-    </div>
+            <Text fontSize="13px">Property Deposit</Text>
+        </Tab> */}
+      </TabList>
+      <TabPanels pr="50px" pl="left">
+            <TabPanel>
+                <Yourinput/>
+            </TabPanel>
+            <TabPanel>
+                <Studentinput/>
+            </TabPanel>
+            <TabPanel>
+                <Studentinput/>
+            </TabPanel>
+            <TabPanel >
+                <Yourinput/>
+            </TabPanel>
+            <TabPanel>
+                <Yourinput/>
+            </TabPanel>
+            <TabPanel>
+                <Yourinput/>
+            </TabPanel>
+            <TabPanel>
+                <Yourinput/>
+            </TabPanel>
+
+        </TabPanels>
+    </Tabs> 
+  </Box>
+  </div>
   );
 }
 
-
+    

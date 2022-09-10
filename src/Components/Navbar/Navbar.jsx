@@ -36,7 +36,7 @@ function Navbar() {
                         <Image src={myBooking} /> My Bookings
                     </Flex>
                 </Link>
-                <Link to="/payrent">
+                <Link to="/payrent/houserent">
                     <Flex className={style.payRent}>
                         <Image src={payRent} /> Pay Rent
                     </Flex>
